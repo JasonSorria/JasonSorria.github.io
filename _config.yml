@@ -10,7 +10,7 @@ url: "http://JasonSorria.github.io"
 
 # Comment
 comment:
-    disqus: coolshark network
+    disqus: coolshark
     # gitment: xxx // 需要修改 comments.html中的client_id和client_secret
     # uyan: 2143225  # 有言id,登录有言官网申请
 
@@ -40,10 +40,6 @@ ga:
 # 《----------------- 上面的信息修改成你自己的 ---------------------------》
 #
 #
-#  _post/ 下的文章更换成你自己的文章
-#  帮忙star一下，感谢~😆 地址： https://github.com/leopardpan/leopardpan.github.io
-#
-#
 # 《--------------- 下面的信息可以自行选择是否修改 ------------------------》
 
 
@@ -58,12 +54,12 @@ cover_color: clear
 
 # The blog button should not be removed.
 blog_button:
-    title: 博客主页
+    title: Blog page
 
 # Navigation buttons in the front page.s
 nav:
-    - {title: 所有文章, description: archive, url: '/archive'}   
-    - {title: 标签, description: tags, url: '/tags'}      
+    - {title: All articles, description: archive, url: '/archive'}   
+    - {title: Label, description: tags, url: '/tags'}      
     - {title: About me, description: about, url: '/about'}      
     
 
