@@ -4,9 +4,11 @@
 
 ### Manual
 
-[Jekyll to built blog](http://baixin.io/2016/10/jekyll_tutorials1/): the method using Jekyll to biult personal blog, and how to modify it to your blog in which there are a large number of comments and some problems. 
+[Jekyll to built blog](http://github.com/JasonSorria/JasonSorria.github.io/blob/master/_posts/2016-10-14-jekyll_tutorials1.md): the method using Jekyll to biult personal blog, and how to modify it to your blog in which there are a large number of comments and some problems. 
 
-[HEXO to built blog](http://baixin.io/2015/08/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/): use HEXO bases on GIthub to built personal blog, there are many issues and comments in manual and when you encounter any problems you can also see this manual.
+
+
+~~[HEXO to built blog](): use HEXO bases on GIthub to built personal blog, there are many issues and comments in manual and when you encounter any problems you can also see this manual.~~
 
 ### Condition of use
 
@@ -45,7 +47,7 @@ If you find any problems when you built blog, you can [Issues](https://github.co
 
 After follow [tips] above to medify it is will create a repository named username.github.io in Github which username is your account of Github.
 After complete, use `git push` to your username.github.io, that is OK. 
-If you encounter any problem, you can see my [manual](http://baixin.io/2016/10/jekyll_tutorials1/)
+If you encounter any problem, you can see my [manual](https://github.com/JasonSorria/JasonSorria.github.io/blob/master/_posts/2016-10-14-jekyll_tutorials1.md)
 
 #### Thanks   
 
