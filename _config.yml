@@ -28,12 +28,12 @@ social:
 # 百度统计 
 # 使用博客模板请去掉或者更换 id 
 baidu:
-
+    id: xxxx
 # Google Analytics
 # 使用博客模板请去掉或者更换 id
 ga:
     host: auto  
-
+    id: xxxx
 
 # 《----------------- 上面的信息修改成你自己的 ---------------------------》
 #
