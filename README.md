@@ -28,7 +28,7 @@ Jekyll need to dependent on Ruby、bundler
 
 Or download straightly [download blog](https://github.com/JasonSorria/JasonSorria.github.io/archive/master.zip)   
 
-Entrance leopardpan.github.io/, startup local service.
+Entrance JasonSorria.github.io/ directory, startup local service.
 
 > $ jekyll server
 
@@ -40,7 +40,7 @@ Input [127.0.0.1:4000](127.0.0.1:4000) on browser, you can see this effect of bl
 >* If you want to use my template, please remove all the articles under the directory _posts/ .
 >* Modify this file named _config.yml to your own information.
 
-If you find any problems when you built blog, you can [Issues](https://github.com/leopardpan/leopardpan.github.io/issues) to leave your problem or send error messages to my personal email coolshark@sorria-linux.club / jason10032992@gmail.com.        
+If you find any problems when you built blog, you can [Issues](https://github.com/JasonSorria/JasonSorria.github.io/issues) to leave your problem or send error messages to my personal email coolshark@sorria-linux.club / jason10032992@gmail.com.        
 
 
 ### Make this blog become your own blog
