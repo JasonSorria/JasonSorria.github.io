@@ -3,9 +3,9 @@ title: Jason Sorria
 subtitle: Personal blog
 description: Welcome to my blog~
 # 头像里面的标题
-avatarTitle: coolshark network
+avatarTitle: coolshark 
 # 头像里面的描述
-avatarDesc: Linux / Network
+avatarDesc: Linux/English
 url: "http://JasonSorria.github.io"
 
 # Comment
@@ -16,24 +16,22 @@ comment:
 
 # Social
 social:
-    weibo: 5366874726 
-    github: leopardpan
+    qq:2979613402
+    github: github.com/JasonSorria
     # zhihu: panpanleopard
     # juejin: xxx
-    jianshu: 2ada30d8d0f7
     # twitter: 
-    mail: leopardpan@icloud.com
+    mail: coolshark@sorria-linux.club
+    mail: jason10032992@gmail.com
 
 
 # 百度统计 
 # 使用博客模板请去掉或者更换 id 
 baidu:
-    id: xxxx  
 
 # Google Analytics
 # 使用博客模板请去掉或者更换 id
 ga:
-    id: xxxx  
     host: auto  
 
 

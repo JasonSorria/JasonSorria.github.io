@@ -1,62 +1,56 @@
 ---
 layout: post
-title: Jekyll搭建个人博客
+title: Jekyll to built own blog
 date: 2016-10-14 
-tags: 博客   
+tags: Github   
 ---
 
-　之前写了一篇[HEXO搭建个人博客](http://baixin.io/2015/08/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)的教程获得了很好评，尤其是在[简书](http://www.jianshu.com/p/465830080ea9)上目前已经累积了10W+的阅读量了，也有好心的读者主动给我打赏，在此感谢。
+### Introduce
 
-　如果你看过我的文章会发现我现在的博客样式跟之前是有很大的区别的，之前我也是使用 HEXO 搭建的博客，后来发现使用 HEXO 在多台电脑上发布博客，操作起来并不是那么方便，果断就转到了 Jekyll 上，接下来我会讲如何使用 Jekyll 搭建博客，[博客模板效果](http://baixin.io/#blog)。
+    Jekyll is a static site production machine in the form of a simple blog. It has a template directory, which contains documents in original text format. Through markdown (or textile) and liquid, it can be converted into a complete and publishable static website, which can be published on any server you like. Jekyll can also run on GitHub page, that is to say, you can use GitHub's services to build your project page, blog or website, which is completely free.
 
+Before using Jekyll to build a blog, you need to confirm the native environment, GIT environment (for deployment to the remote end), ruby environment (Jekyll is developed based on Ruby), and package manager rubygems. If you're a Mac user, you need to install Xcode and command line tools. Download mode: preferences → downloads → components.
 
-### 介绍
-
- 　Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过 Markdown （或者 Textile） 以及 Liquid 转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll 也可以运行在 GitHub Page 上，也就是说，你可以使用 GitHub 的服务来搭建你的项目页面、博客或者网站，而且是完全免费的
-
-　使用 Jekyll 搭建博客之前要确认下本机环境，Git 环境（用于部署到远端）、[Ruby](http://www.ruby-lang.org/en/downloads/) 环境（Jekyll 是基于 Ruby 开发的）、包管理器 [RubyGems](http://rubygems.org/pages/download)                
-　　如果你是 Mac 用户，你就需要安装 Xcode 和 Command-Line Tools了。下载方式 Preferences → Downloads → Components。
-
-　　Jekyll 是一个免费的简单静态网页生成工具，可以配合第三方服务例如： Disqus（评论）、多说(评论) 以及分享 等等扩展功能，Jekyll 可以直接部署在 Github（国外） 或 Coding（国内） 上，可以绑定自己的域名。[Jekyll中文文档](http://jekyll.bootcss.com/)、[Jekyll英文文档](https://jekyllrb.com/)、[Jekyll主题列表](http://jekyllthemes.org/)。
+    Jekyll is a free simple static web page generation tool, which can cooperate with third-party services such as: Disqus (comments), multi say (comments) and sharing and other extension functions. Jekyll can be directly deployed on GitHub (foreign) or coding (domestic), and can bind its own domain name. Jekyll Chinese documents, Jekyll English documents, Jekyll subject list.
 
 
-### Jekyll 环境配置
+### Jekyll environment configuration
 
-安装 jekyll
+Install jekyll
 
 ```     
 $ gem install jekyll     
 ```    
 
-创建博客
+Create blog
 
 ```    
 $ jekyll new myBlog    
 ```   
 
-进入博客目录
+Entrance the directory of blog
 
 ```
 $ cd myBlog  
 ```
 
-启动本地服务
+Startup local service
 
 ```
 $ jekyll serve
 ```
 
-在浏览器里输入： [http://localhost:4000](http://localhost:4000)，就可以看到你的博客效果了。
+Input [http://localhost:4000](http://localhost:4000) on browse, you can see this effect.
 
 ![](/images/posts/jekyll/image1.png)
 
-so easy !
+So easy !
 
-### 目录结构
+### Directory structure
+
+    The core of Jekyll is actually a text conversion engine. Its concept is actually: you can use your favorite markup language to write articles, which can be markdown, textile, or simple HTML, and then Jekyll will help you put it into a layout or a series of layouts. In the whole process, you can set the URL path, the display style of your text in the layout, and so on. These can be achieved through plain text editing, and the final static page is your finished product.
 　
-　Jekyll 的核心其实是一个文本转换引擎。它的概念其实就是： 你用你最喜欢的标记语言来写文章，可以是 Markdown，也可以是 Textile,或者就是简单的 HTML, 然后 Jekyll 就会帮你套入一个或一系列的布局中。在整个过程中你可以设置URL路径, 你的文本在布局中的显示样式等等。这些都可以通过纯文本编辑来实现，最终生成的静态页面就是你的成品了。
-
- 一个基本的 Jekyll 网站的目录结构一般是像这样的：
+The directory structure of a basic Jekyll website is generally like this:
 
 ```
 .
@@ -82,22 +76,22 @@ so easy !
 
 ```
 
-这些目录结构以及具体的作用可以参考 [官网文档](http://jekyll.com.cn/docs/structure/) 
+These directory structures and specific functions can be referred to[Official website documents](http://jekyll.com.cn/docs/structure/) 
 
-进入 _config.yml 里面，修改成你想看到的信息，重新 jekyll server ，刷新浏览器就可以看到你刚刚修改的信息了。
+Enter file _config.yml, modify it to the information you want to see, re Jekyll server, refresh the browser and you can see the information you just modified.
 
 到此，博客初步搭建算是完成了，
 
-### 博客部署到远端 
+### Blog deployment to remote
 
-　我这里讲的是部署到 Github Page 创建一个 github 账号，然后创建一个跟你账户名一样的仓库，如我的 github 账户名叫 [leopardpan](https://github.com/leopardpan)，我的 github 仓库名就叫 [leopardpan.github.io](https://github.com/leopardpan/leopardpan.github.io)，创建好了之后，把刚才建立的 myBlog 项目 push 到 username.github.io仓库里去（username指的是你的github用户名），检查你远端仓库已经跟你本地 myBlog 同步了，然后你在浏览器里输入 username.github.io ，就可以访问你的博客了。
+What I'm talking about here is to deploy to GitHub page to create a GitHub account, and then create a warehouse with the same name as your account. For example, my GitHub account is called leopardpan, and my GitHub warehouse is called leopardpan.github.io. After the creation, push the myblog item you just created into the username.github.io warehouse (username refers to your GitHub user Check that your remote warehouse is synchronized with your local myblog, and then you can access your blog by typing username.github.io in your browser.
 
+### Writing an article
 
-### 编写文章
+All articles are under the _Posts directory. The article format is mardown. The article file name can be. Mardown or. MD.
 
-　　所有的文章都是 _posts 目录下面，文章格式为 mardown 格式，文章文件名可以是 .mardown 或者 .md。
-
-　　编写一篇新文章很简单，你可以直接从 _posts/ 目录下复制一份出来 `2016-10-16-welcome-to-jekyll副本.markdown` ，修改名字为 2016-10-16-article1.markdown ，注意：文章名的格式前面必须为 2016-10-16- ，日期可以修改，但必须为 年-月-日- 格式，后面的 article1 是整个文章的连接 URL，如果文章名为中文，那么文章的连接URL就会变成这样的：http://baixin.io/2015/08/%E6%90%AD%E5/ ， 所以建议文章名最好是英文的或者阿拉伯数字。 双击 2016-10-16-article1.markdown 打开
+It's easy to write a new article. You can directly copy a copy of 2016-10-16-welcome-to-jekyll from ﹐ posts / directory. Markdown, change the name to 2016-10-16-article1.markdown. Note: the format of the article name must be 2016-10-16-in front of it, and the date can be modified, but it must be in year month day format. The following article1 is the connection URL of the whole article, If the article name is Chinese, then the connection URL of the article will be as follows:
+http://baixin.io/2015/08/%E6%90%AD%E5/, so it is suggested that the article name should be English or Arabic numerals. Double click 2016-10-16-article1.markdown to open.
 
 ```
 
@@ -108,31 +102,28 @@ date:   2016-10-16 11:29:08 +0800
 categories: jekyll update
 ---
 
-正文...
+Text...
 
 ```
 
 
-title: 显示的文章名， 如：title: 我的第一篇文章                    
-date:  显示的文章发布日期，如：date: 2016-10-16                          
-categories: tag标签的分类，如：categories: 随笔            
+title: show article name, such as: title: my first article.                   
+date:  show release time, such as: date: 2016-10-16.
+categories: tag label such as: categories: blog            
 
-注意：文章头部格式必须为上面的，.... 就是文章的正文内容。
+I use Markdown to write article, if you are strange of syntax of Markdown, you can see [this](https://www.zybuluo.com/) 
 
-我写文章使用的是 Sublime Text2 编辑器，如果你对 markdown 语法不熟悉的话，可以看看[作业部落的教程](https://www.zybuluo.com/) 
+### Use my blog template
 
+Although the blog deployment is completed, you will find that the blog is too simple for you. If you like my template, you can use my template.
 
-### 使用我的博客模板
-
-虽然博客部署完成了，你会发现博客太简单不是你想要的，如果你喜欢我的模板的话，可以使用我的模板。
-
-首先你要获取的我博客，[Github项目地址](https://github.com/leopardpan/leopardpan.github.io.git)，你可以直接[点击下载博客](https://github.com/leopardpan/leopardpan.github.io/archive/master.zip)，进去leopardpan.github.io/ 目录下， 使用命令部署本地服务 
+First of all, you need to get my blog, [GitHub project address](https://github.com/JasonSorria/JasonSorria.github.io). You can directly click [download blog](https://github.com/JasonSorria/JasonSorria.github.io), go to JasonSorria.github.io/ directory, and use the command to deploy the local service
 
 ```
 $ jekyll server   
 ```
 
-### 如果你本机没配置过任何jekyll的环境，可能会报错
+### If you have not configured any Jekyll environment on this machine, you may report an error
 
 ```
 /Users/xxxxxxxx/.rvm/rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require': cannot load such file -- bundler (LoadError)
@@ -146,7 +137,7 @@ $ jekyll server
 
 ```
 
-原因： 没有安装 bundler ，执行安装 bundler 命令
+Reason: bundler is not installed, execute the install bundler command.
 
 ```
 
@@ -155,7 +146,7 @@ $ gem install bundler
 ```
 
 
-提示： 
+Tips: 
 
 ```
 Fetching: bundler-1.13.5.gem (100%)
@@ -167,7 +158,7 @@ Done installing documentation for bundler after 5 seconds
 
 ```
 
-再次执行 $ jekyll server  ，提示
+Execute again $ jekyll server , and tips:
 
 ```
 
@@ -176,15 +167,15 @@ Run `bundle install` to install missing gems.
 
 ```
 
-跟着提示运行命令
+Follow the prompts to run the command
 
 ```
 $ bundle install
 ```
 
-这个时候你可能会发现 bundle install 运行卡主不动了。
+At this time, you may find that the running card of the bundle install does not move.
 
-如果很长时间都没任何提示的话，你可以尝试修改 gem 的 source
+If there is no prompt for a long time, you can try to modify the source of gem.
 
 ```
 $ gem sources --remove https://rubygems.org/
@@ -196,7 +187,7 @@ http://ruby.taobao.org
 
 ```
 
-再次执行命令 $ bundle install，发现开始有动静了
+Execute the command $bundle install again, and find that there is something moving
 
 ```
 Fetching gem metadata from https://rubygems.org/...........
@@ -210,14 +201,14 @@ Use `bundle show [gemname]` to see where a bundled gem is installed.
 
 ```
 
-bundler安装完成，后再次启动本地服务 
+After the bundler installation is completed, start the local service again.
 
 ```
 $ jekyll server
 
 ```
 
-继续报错
+Continue to report errors.
 
 ```
 Configuration file: /Users/tendcloud-Caroline/Desktop/leopardpan.github.io/_config.yml
@@ -225,22 +216,22 @@ Configuration file: /Users/tendcloud-Caroline/Desktop/leopardpan.github.io/_conf
 jekyll 3.1.1 | Error:  jekyll-sitemap
 
 ```
-表示 当前的 jekyll 版本是 3.1.1 ，无法使用 jekyll-sitemap 
+Indicates that the current version of Jekyll is 3.1.1 and cannot use Jekyll Sitemap
 
-解决方法有两个
+There are two solutions
 
-> 1、打开当前目录下的 _config.yml 文件，把 gems: [jekyll-paginate,jekyll-sitemap] 换成 gems: [jekyll-paginate] ，也就是去掉jekyll-sitemap。
+>1. Open the file _config.yml in the current directory, and change gems: [Jekyll paginate, Jekyll sitemap] to Gems: [Jekyll paginate], that is, remove Jekyll sitemap.
 
-> 2、升级 jekyll 版本，我当前的是 jekyll 3.1.2 。
 
-修改完成后保存配置，再次执行
+>2. Upgrade the Jekyll version. My current version is Jekyll 3.1.2.
+
+Save the configuration after modification and execute again
 
 ```
 $ jekyll server
 
 ```
-提示
-
+Tips:
 ```
 Configuration file: /Users/baixinpan/Desktop/OpenSource/Mine/Page-Blog/leopardpan.github.io-github/_config.yml
             Source: /Users/baixinpan/Desktop/OpenSource/Mine/Page-Blog/leopardpan.github.io-github
@@ -254,34 +245,31 @@ Configuration file: /Users/baixinpan/Desktop/OpenSource/Mine/Page-Blog/leopardpa
   Server running... press ctrl-c to stop.
 
 ```
+Indicates the local service deployment is successful.
 
-表示本地服务部署成功。
+Enter [127.0.0.1:4000](127.0.0.1:4000) in the browser to see the effect of [JasonSorria.github.io](https://JasonSorria.github.io).
 
-在浏览器输入 [127.0.0.1:4000](127.0.0.1:4000) ， 就可以看到[baixin.io](http://baixin.io)博客效果了。
+### Change to your own blog
 
-### 修改成你自己的博客
+>* If you want to use my template, please remove all the articles in the _post/ directory.
+>* Modify the contents of _config.yml file to your own.
 
->* 如果你想使用我的模板请把 _posts/ 目录下的文章都去掉。
->* 修改 _config.yml 文件里面的内容为你自己的。
+Then use git push to go to your own warehouse, check your remote warehouse, enter username.github.io in the browser and you will find that you have a beautiful theme template.
 
-然后使用 git push 到你自己的仓库里面去，检查你远端仓库，在浏览器输入 username.github.io 就会发现，你有一个漂亮的主题模板了。      
+#### 【if you want to change the blog style but don't know how to do it, you can directly ask me in the comments 】
 
+### Why Jekyll
 
-#### 【 如果想修改博客样式却不知道怎么修改，可以直接在评论里给我提问 】
+Using Jekyll, you will find that if you want to use multiple computers to blog, it's very convenient. Just clone the blog in the remote GitHub warehouse and submit it after writing an article. Because the remote submission is a static web page, hexo can't directly write markdown's articles. If you want to see hexo build a blog, you can take a look at my other hexo build a personal blog tutorial.
 
-### 为什么要是用 Jekyll
+If you have any problems in building a blog, you can ask me questions in the comments of the original blog.
 
-使用了 Jekyll 你会发现如果你想使用多台电脑发博客都很方便，只要把远端 github 仓库里的博客 clone 下来，写文章后再提交就可以了，Hexo 由于远端提交的是静态网页，所有无法直接写 Markdown 的文章。如果你想看 Hexo 搭建博客，可以看看我的另一篇[HEXO搭建个人博客](http://baixin.io/2015/08/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)的教程。
-
-如果你在搭建博客遇到问题，可以在[原文博客](http://baixin.io/2016/10/jekyll_tutorials1/)的评论里给我提问。
-
-后面会继续介绍，在我的博客基础上，如何修改成你自己喜欢的 Style，欢迎继续关注我博客的更新。
-
+Later, I will continue to introduce how to modify my blog to your favorite style. Welcome to continue to follow my blog update.
 
 ### Q&A 
 
-> 问题：最近很多朋友使用我的模板报警告：The CNAME `baixin.io` is already taken 
-> 解决：把CNAME里面的baixin.io修改成你自己的域名，如果你暂时没有域名，CNAME里面就什么都不用谢。（之前没人反馈过这个问题，应该是github page最近才最的限制。）
+> Questions:
+> solution: 
 
 
 

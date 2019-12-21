@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Jekyll搭建个人博客(二)
+title: Jekyll to built own blog again
 date: 2017-09-05 
-tags: 博客   
+tags: Github   
 ---
  
 抱歉，太久没有更新博客了，很多网友问的问题也没能及时回答。具体原因就不说了，今后我会继续维护博客，有问题的朋友直接提问就行，我会尽快解答，希望大家多多支持。
