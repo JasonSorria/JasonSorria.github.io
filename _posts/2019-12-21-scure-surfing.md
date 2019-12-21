@@ -27,7 +27,6 @@ tags: comfort surfing
 
 ## Let us start.
 
-#
 
 ### 1. You should have a abroad server, i recommend [Google Cloud Platform](https://cloud.google.com/).
 
@@ -63,7 +62,6 @@ tags: comfort surfing
 
 - **You also see [his blog](https://blog.csdn.net/sxt_zls/article/details/89449843) to get more details**
 
-#
 
 ### 2. You need a international domain,you can buy one at [namesilo](https://www.namesilo.com/account_home.php).
 
@@ -78,8 +76,6 @@ tags: comfort surfing
 **Into the interface of Manage Your Domain.** 
 
 ![picture loading](/images/posts/v2ray/3.PNG) 
-
-#
 
 ### 3. Analysis your domain to your VPS and add CDN and DNSSEC.
 
@@ -127,7 +123,6 @@ tags: comfort surfing
 
 ![picture loading](/iamges/posts/v2ray13.PNG)
 
-#
 
 ### 4. Product verification.
 
@@ -138,7 +133,6 @@ tags: comfort surfing
 
 ![picture loading](/iamges/posts/v2ray14.PNG)
 
-#
 
 ### 5. Add TXT record for your VPS.
 
