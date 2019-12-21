@@ -80,7 +80,7 @@ These directory structures and specific functions can be referred to[Official we
 
 Enter file _config.yml, modify it to the information you want to see, re Jekyll server, refresh the browser and you can see the information you just modified.
 
-到此，博客初步搭建算是完成了，
+So far, the initial construction of blog is completed.
 
 ### Blog deployment to remote
 

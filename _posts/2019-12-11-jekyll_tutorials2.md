@@ -1,24 +1,24 @@
 ---
 layout: post
 title: Jekyll to built own blog again
-date: 2017-09-05 
-tags: Github   
+date: 2019-12-11
+tags: Github
 ---
- 
-抱歉，太久没有更新博客了，很多网友问的问题也没能及时回答。具体原因就不说了，今后我会继续维护博客，有问题的朋友直接提问就行，我会尽快解答，希望大家多多支持。
 
-在此之前我有写过一篇[如何使用我博客模板的文章](http://baixin.io/2016/10/jekyll_tutorials1/) 请先看这篇基础集成，这篇文章主要讲的是如何使用和修改我的博客主题，文章内容含以下几点：
+Sorry, I haven't updated my blog for a long time. Many netizens didn't answer the questions in time. I will continue to maintain my blog in the future. If you have any questions, just ask them directly. I will answer them as soon as possible. I hope you can support me a lot.
 
-* 修改博客基础信息
-* 发布文章
-* 修改博客样式
+Before that, I wrote an article [Jekyll to built own blog again](https://jasonsorria.github.io/2016/10/jekyll_tutorials1/). Please read this basic integration first. This article mainly talks about how to use and modify my blog theme. The content of the article includes the following points:
 
-博客模板根目录下的基本结构为
+* Modify basic blog information
+* Publish articles
+* Modify blog style
+
+The basic structure of the blog template root directory is:
 
 ```
 .
-├── _config.yml 
-├── _includes    
+├── _config.yml
+├── _includes
 ├── _layouts
 ├── _posts
 ├── _site
@@ -38,4 +38,3 @@ tags: Github
 └── tags.html
 
 ```
-
