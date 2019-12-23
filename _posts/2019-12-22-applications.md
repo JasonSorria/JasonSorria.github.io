@@ -5,49 +5,45 @@ date: 2019-12-22
 tags: linux   
 ---
 
-# some useful applications
+### Update system source
 
->$ sudo pacman-mirrors -c China
-
->$ sudo pacman -Syyu
-
+```shell
+$ sudo pacman-mirrors -c China
+$ sudo pacman -Syyu
+```
 **Teamviewer: GUI remote tool**
 
->$ sudo pacman -S teamviewer
-
->$ sudo nano /opt/teamviewer/tv_bin/desktop/com.teamviewer.TeamViewer.desktop
-
->Execute /bin/sudo /opt/teamviewer/tv_bin/script/teamviewer passwd 123456
-
+```shell
+$ sudo pacman -S teamviewer
+$ sudo vim /opt/teamviewer/tv_bin/desktop/com.teamviewer.TeamViewer.desktop
+# modify this line: 
+# Execute=/bin/sudo /opt/teamviewer/tv_bin/script/teamviewer passwd 123456
+```
 **Netease cloud music**
 
->$ sudo pacman -S netease-cloud-music vlc
-
->$ sudo nano /usr/share/applications/netease-cloud-music.desktop
-
->Execute /opt/netease/netease-cloud-music/netease-cloud-music %U
+```shell
+$ sudo pacman -S netease-cloud-music vlc
+$ sudo vim /usr/share/applications/netease-cloud-music.desktop
+# modify this line:
+# Execute=/opt/netease/netease-cloud-music/netease-cloud-music %U
+```
 
 **TIM**
 
->$ sudo pacman -S deepin.com.qq.office
-
->add the following in your /etc/pacman.conf
-
 ```shell
+$ sudo pacman -S deepin.com.qq.office
+# add the following lines in your /etc/pacman.conf
 $ vim /etc/pacman.conf
 
 [archlinuxcn]
 SigLevel = Never
 Server = http://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+
+$sudo pacman Syu
+$sudo pacman -S gnome-settings-daemon
+# excute=/usr/lib/gsd-xsettings //it will became a daemon process hanging out your system
+# open your pamc or other application managements to run tim
 ```
->$sudo pacman Syu
-
->$sudo pacman -S gnome-settings-daemon
-
->excute /usr/lib/gsd-xsettings //it will became a daemon process hanging out your system
-
->open your pamc or other application managements to run tim
-
 **redshift:** a tool for protecting your eyes, but it needs ro extra configuration.
 
 **wqy-microhei:** a open source Chinese font for free.
@@ -74,7 +70,7 @@ Server = http://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
 **screenfetch:** a funny tool.
 
-**neofetch: ** a funny tool.
+**neofetch:** a funny tool.
 
 **lolcat:** a fucking funny tool and if you use it with screenfetch or neofetch you will get more surprise.
 
@@ -82,7 +78,7 @@ Server = http://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
 **unarchiver:** use CLI to unzip and support command of unar、lsar
 
-**p7zip: a very popular unzip tool.
+**p7zip:** a very popular unzip tool.
 
 **kchmviewer:** chm file browser management.
 
@@ -94,11 +90,11 @@ Server = http://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
 **deepin-screenshot:** deepin screen shuter.
 
-**deepin-picker: a tool for take colors.
+**deepin-picker: **a tool for take colors.
 
 **deepin-screen-recorder:** deepin record screen tool.
 
-**deepin-movie: deepin video palyer.
+**deepin-movie:** deepin video palyer.
 
 **vlc:** a powerful open source video palyer for all platform.
 
@@ -126,11 +122,12 @@ Server = http://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
 **jmtpfs [aur]:** mount phone package.
 
->$ jmtpfs /path
+```shell
+$ jmtpfs /path
+$ fusermount -u /path
+```
 
->$ fusermount -u /path
-
-## Another applications:
+# Another applications:
 
 **dmidecode:** it can show some information of hardware.
 

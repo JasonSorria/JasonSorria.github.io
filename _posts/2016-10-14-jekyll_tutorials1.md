@@ -7,11 +7,11 @@ tags: Github
 
 ### Introduce
 
-    Jekyll is a static site production machine in the form of a simple blog. It has a template directory, which contains documents in original text format. Through markdown (or textile) and liquid, it can be converted into a complete and publishable static website, which can be published on any server you like. Jekyll can also run on GitHub page, that is to say, you can use GitHub's services to build your project page, blog or website, which is completely free.
+Jekyll is a static site production machine in the form of a simple blog. It has a template directory, which contains documents in original text format.Through markdown (or textile) and liquid, it can be converted into a complete and publishable static website, which can be published on any server you like. Jekyll can also run on GitHub page, that is to say, you can use GitHub's services to build your project page, blog or website, which is completely free.
 
 Before using Jekyll to build a blog, you need to confirm the native environment, GIT environment (for deployment to the remote end), ruby environment (Jekyll is developed based on Ruby), and package manager rubygems. If you're a Mac user, you need to install Xcode and command line tools. Download mode: preferences → downloads → components.
 
-    Jekyll is a free simple static web page generation tool, which can cooperate with third-party services such as: Disqus (comments), multi say (comments) and sharing and other extension functions. Jekyll can be directly deployed on GitHub (foreign) or coding (domestic), and can bind its own domain name. Jekyll Chinese documents, Jekyll English documents, Jekyll subject list.
+Jekyll is a free simple static web page generation tool, which can cooperate with third-party services such as: Disqus (comments), multi say (comments) and sharing and other extension functions. Jekyll can be directly deployed on GitHub (foreign) or coding (domestic), and can bind its own domain name. Jekyll Chinese documents, Jekyll English documents, Jekyll subject list.
 
 
 ### Jekyll environment configuration
@@ -48,7 +48,7 @@ So easy !
 
 ### Directory structure
 
-    The core of Jekyll is actually a text conversion engine. Its concept is actually: you can use your favorite markup language to write articles, which can be markdown, textile, or simple HTML, and then Jekyll will help you put it into a layout or a series of layouts. In the whole process, you can set the URL path, the display style of your text in the layout, and so on. These can be achieved through plain text editing, and the final static page is your finished product.
+The core of Jekyll is actually a text conversion engine. Its concept is actually: you can use your favorite markup language to write articles, which can be markdown, textile, or simple HTML, and then Jekyll will help you put it into a layout or a series of layouts. In the whole process, you can set the URL path, the display style of your text in the layout, and so on. These can be achieved through plain text editing, and the final static page is your finished product.
 　
 The directory structure of a basic Jekyll website is generally like this:
 
@@ -94,7 +94,6 @@ It's easy to write a new article. You can directly copy a copy of 2016-10-16-wel
 http://baixin.io/2015/08/%E6%90%AD%E5/, so it is suggested that the article name should be English or Arabic numerals. Double click 2016-10-16-article1.markdown to open.
 
 ```
-
 ---
 layout: post
 title:  "Welcome to Jekyll!"
@@ -103,10 +102,7 @@ categories: jekyll update
 ---
 
 Text...
-
 ```
-
-
 title: show article name, such as: title: my first article.                   
 date:  show release time, such as: date: 2016-10-16.
 categories: tag label such as: categories: blog            
@@ -136,16 +132,11 @@ $ jekyll server
 	from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/bin/ruby_executable_hooks:15:in `<main>'
 
 ```
-
 Reason: bundler is not installed, execute the install bundler command.
 
 ```
-
 $ gem install bundler
-
 ```
-
-
 Tips: 
 
 ```
@@ -155,20 +146,16 @@ Parsing documentation for bundler-1.13.5
 Installing ri documentation for bundler-1.13.5
 Done installing documentation for bundler after 5 seconds
 1 gem installed
-
 ```
 
-Execute again $ jekyll server , and tips:
+Execute again `$ jekyll server` , and tips:
 
 ```
-
 Could not find proper version of jekyll (3.1.1) in any of the sources
 Run `bundle install` to install missing gems.
-
 ```
 
 Follow the prompts to run the command
-
 ```
 $ bundle install
 ```
@@ -181,10 +168,9 @@ If there is no prompt for a long time, you can try to modify the source of gem.
 $ gem sources --remove https://rubygems.org/
 $ gem sources -a http://ruby.taobao.org/
 $ gem sources -l
-*** CURRENT SOURCES ***
+CURRENT SOURCES
 
 http://ruby.taobao.org
-
 ```
 
 Execute the command $bundle install again, and find that there is something moving
@@ -193,28 +179,23 @@ Execute the command $bundle install again, and find that there is something movi
 Fetching gem metadata from https://rubygems.org/...........
 Fetching version metadata from https://rubygems.org/..
 Fetching dependency metadata from https://rubygems.org/.
-。。。
 Installing jekyll-watch 1.3.1
 Installing jekyll 3.1.1
 Bundle complete! 3 Gemfile dependencies, 17 gems now installed.
 Use `bundle show [gemname]` to see where a bundled gem is installed.
-
 ```
 
 After the bundler installation is completed, start the local service again.
 
 ```
 $ jekyll server
-
 ```
-
 Continue to report errors.
 
 ```
 Configuration file: /Users/tendcloud-Caroline/Desktop/leopardpan.github.io/_config.yml
   Dependency Error: Yikes! It looks like you don't have jekyll-sitemap or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. The full error message from Ruby is: 'cannot load such file -- jekyll-sitemap' If you run into trouble, you can find helpful resources at http://jekyllrb.com/help/! 
 jekyll 3.1.1 | Error:  jekyll-sitemap
-
 ```
 Indicates that the current version of Jekyll is 3.1.1 and cannot use Jekyll Sitemap
 
@@ -229,7 +210,6 @@ Save the configuration after modification and execute again
 
 ```
 $ jekyll server
-
 ```
 Tips:
 ```
@@ -243,7 +223,6 @@ Configuration file: /Users/baixinpan/Desktop/OpenSource/Mine/Page-Blog/leopardpa
 Configuration file: /Users/baixinpan/Desktop/OpenSource/Mine/Page-Blog/leopardpan.github.io-github/_config.yml
     Server address: http://127.0.0.1:4000/
   Server running... press ctrl-c to stop.
-
 ```
 Indicates the local service deployment is successful.
 
@@ -269,6 +248,7 @@ Later, I will continue to introduce how to modify my blog to your favorite style
 ### Q&A 
 
 > Questions:
+
 > solution: 
 
 
