@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Uesing pppoe to connect network
+title: Using pppoe to connect network
 date: 2019-12-22 
 tags: linux   
 ---
 
-### Introduces
+### Introduction
 
 When you first to install linux you may face a very tricky problem that you find your system can not connect Ethernet even if you have plugged in cable. Fortunately, you still connect Internet using WIFI. When i first install i3wm desktop application, i face many tricky problems one of them is this.
 
