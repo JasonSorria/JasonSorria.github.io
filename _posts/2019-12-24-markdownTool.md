@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markdown syntax and some tools
-date: 2016-11-20 
+date: 2019-12-24
 tags: linux    
 ---
 
@@ -35,7 +35,7 @@ H6 :###### Header 6
 
 ======================================================
 
-Crl link:`[Title](URL)`.
+Url link:`[Title](URL)`.
 
 Picture: `![Picture](/picture-path)`
 
@@ -158,3 +158,9 @@ Most of the syntax of CSS can also be used on markdown, but different renderers 
 [Classeur](http://classeur.io/?utm_source=mindstore.io) easy to use and own simple and elegant interface.
 
 [DeerResume](https://github.com/geekcompany/DeerResume?utm_source=mindstore.io) a online tool for programmer to make resume.                
+
+### Q&A
+
+> Q:
+
+> A:
