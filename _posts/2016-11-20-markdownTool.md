@@ -1,80 +1,160 @@
 ---
 layout: post
-title: Markdown工具集
+title: Markdown syntax and some tools
 date: 2016-11-20 
-tags: 工具    
+tags: linux    
 ---
 
 
-### 什么是 Markdown
+### What Markdown
 
-　　Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：如您正在阅读的这篇文章。它使用简单的符号标记不同的标题，分割不同的段落，**粗体** 或者 *斜体* 某些文字.
+Markdown is a plain text markup language that is easy to remember and write. Users can use these markup symbols to generate expressive documents at the lowest input cost: as you are reading this article. It uses simple symbols to mark different titles, split different paragraphs, bold or italics some text.
 
-　　很多产品的文档也是用markdown编写的，并且以“README.MD”的文件名保存在软件的目录下面。               
+Most important, it can be used with vim and only you install some vim plugins, you can browser your note on Google chrome or Firefox. it is not so nice?
+
+Many product documents are also written in markdown, and are saved in the directory of the software under the filename "README.", expcial Github.
 　　
+### Some common synyax
 
-### 一些基本语法
-
-标题            
+Tilte            
 H1 :# Header 1            
 H2 :## Header 2           
 H3 :### Header 3           
 H4 :#### Header 4           
 H5 :##### Header 5            
 H6 :###### Header 6      
-链接 :[Title](URL)        
-加粗 :**Bold**        
-斜体字 :*Italics*         
-*删除线 :~~text~~          
-段落 : 段落之间空一行           
-换行符 : 一行结束时输入两个空格           
-列表 :* 添加星号成为一个新的列表项。          
-引用 :> 引用内容               
-内嵌代码 : `alert('Hello World');`        
-画水平线 (HR) :--------          
-           
 
-css 的大部分语法同样可以在 markdown 上使用，但不同的渲染器渲染出来的 markdown 内容样式也不一样，下面这些链接里面有 markdown 基本语法，你也可以在下面几个平台上尝试着写一些。
+>effect:
 
-### 一些好用的 Markdown 编辑器
+# Header 1       
+## Header 2      
+### Header 3     
+#### Header 4    
+##### Header 5   
+###### Header 6  
 
-<br />
+======================================================
 
-[MaHua](http://mahua.jser.me/?utm_source=mindstore.io) 在线 Markdown 编辑器 ,无须测试。
+Crl link:`[Title](URL)`.
+
+Picture: `![Picture](/picture-path)`
+
+>effect:
+
+[localhost](localhost)
+
+![](/images/posts/markdown/test.png)
+
+======================================================
+
+Bold :`**Bold**`.
+
+Italics :`*Italics*`.         
+
+Bold and italics :***bold and Italics***
+
+>effect:
+
+**bold**
+
+*Italics*
+
+***bold and Italics***
+
+======================================================
+
+show code : `alert('Hello World');`        
+show code : ```alert('Hello World');```
+
+>effect:
+
+`Hello World`
+
+```shell
+this is a pice of code
+```     
+you can modify the syntax hightlight like shell,C/C++...
+
+======================================================
+
+Delect line :`~~text~~`.          
+
+>effect:
+
+~~text~~
+
+======================================================
+
+List: add *,+,- to become a new list item.
+
+List include: need Enter+ three Space
+
+>effect:
+
+* item
+- item
++ item
+
+* item fater
+   * item child
+        * item baby
+            * item cell
+
+======================================================
+
+Reference : > reference contents.               
+Reference : >> refrence contents.               
+Reference : >>> refrence contents.               
+Reference : >* refrence contents.               
+
+effect:
+
+> refrence
+>> refrence
+>>> refrence
+> * refrence
+
+======================================================
+
+Paragraph: empty line between paragraphs.           
+
+======================================================
+
+Line break: enter two spaces at the end of a line.
+
+```
+---
+----
+***
+****
+```
+>effect:
+
+---
+----
+***
+****
+
+======================================================
+
+Most of the syntax of CSS can also be used on markdown, but different renderers render different markdown content styles. The following links contain markdown basic syntax. You can also try to write some on the following platforms.
 
 
-<br />
+### Some nice Markdown editor
 
-![](/images/posts/markdown/image1.png)
+[MaHua](http://mahua.jser.me/?utm_source=mindstore.io) online Markdown editor and not to debug.
 
-<br />
-
-[Markdown Plus](http://mdp.tylingsoft.com/) 一款 Markdown 编辑器，可以支持添加任务列表、emoji、流程图等。
-
-<br />
-
-![](/images/posts/markdown/image2.png)
-
-<br />
-
-[Cmd Markdown](https://www.zybuluo.com/cmd/?utm_source=mindstore.io) 作业部落在线 Markdown 编辑器推出桌面版客户端啦，全平台支援。
-
-![](/images/posts/markdown/image3.png)
-
-[Macdown](https://github.com/MacDownApp/macdown) Github 上开源的 Mac 平台上的 Markdown 编辑器
-
-[GitBook Editor](https://www.gitbook.com/editor?utm_source=mindstore.io) 一款团队在线编辑文档工具。可以轻松书写笔记，支持团队协同编辑。同时支持 Markdown 语法，还保持了印象笔记的风格并可在线预览。
+[Markdown Plus](http://mdp.tylingsoft.com/) a powerful Markdown editor which supports to add task,emoji and flow chart.
 
 
-[Outlinely](http://www.glamdevelopment.com/outlinely?utm_source=mindstore.io) 界面简洁大方的大纲类 Mac 软件，使用起来很简单，而且支持输出 Markdown 格式。
+[Cmd Markdown](https://www.zybuluo.com/cmd/?utm_source=mindstore.io) a powerful and cross-platform Markdown editor and it has released desktop client.
 
+[Macdown](https://github.com/MacDownApp/macdown) a open source project on Github and support Mac OS.
 
-[Classeur](http://classeur.io/?utm_source=mindstore.io) 实用简洁的 Markdown 写作工具，快速上手。
+[GitBook Editor](https://www.gitbook.com/editor?utm_source=mindstore.io) a online tool supporting multiple user to edit. it can write note easily and support all team togather to edit, espacially it remian the style of YingXiang note.
 
+[Outlinely](http://www.glamdevelopment.com/outlinely?utm_source=mindstore.io) a Mac application which owns simple and elegant interface and easy to use, and support syntax of Markdown.
 
-[DeerResume](https://github.com/geekcompany/DeerResume?utm_source=mindstore.io) 程序员专用 MarkDown 简历制作在线工具。                
+[Classeur](http://classeur.io/?utm_source=mindstore.io) easy to use and own simple and elegant interface.
 
-<br>
-
-转载请注明：[潘柏信的博客](http://baixin) » [Markdown工具集](http://baixin.io/2016/11/markdownTool/)                   
-
+[DeerResume](https://github.com/geekcompany/DeerResume?utm_source=mindstore.io) a online tool for programmer to make resume.                
