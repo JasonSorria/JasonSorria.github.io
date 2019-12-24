@@ -1,16 +1,16 @@
 # Basic
 title: Jason Sorria
 subtitle: Personal blog
-description: Welcome to my blog~
+description: Welcome to my personal site
 # 头像里面的标题
-avatarTitle: coolshark 
+avatarTitle: Coolshark 
 # 头像里面的描述
-avatarDesc: Linux/English
+avatarDesc: Linux / English
 url: "http://JasonSorria.github.io"
 
 # Comment
 comment:
-    disqus: coolshark
+    disqus: Coolshark
     # gitment: xxx // 需要修改 comments.html中的client_id和client_secret
     # uyan: 2143225  # 有言id,登录有言官网申请
 
