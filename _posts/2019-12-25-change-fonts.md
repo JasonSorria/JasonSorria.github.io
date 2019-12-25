@@ -17,7 +17,7 @@ For me, it not only beautify my system, which make my system seem as a very nice
 
     `$ cd /usr/share/fonts && mkdir new-fonts && cd new-fonts`
 
-- **2 download fonts style on baidu or google, i recommend ![nerd fonts](https://www.nerdfonts.com/), and unzip it**
+- **2 download fonts style on baidu or google, i recommend [nerd fonts](https://www.nerdfonts.com/), and unzip it**
 
 - **3 add your TTF file into this new-fonts directory**
     
