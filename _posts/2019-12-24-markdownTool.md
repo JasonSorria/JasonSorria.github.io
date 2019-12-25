@@ -10,13 +10,13 @@ tags: linux
 
 Markdown is a plain text markup language that is easy to remember and write. Users can use these markup symbols to generate expressive documents at the lowest input cost: as you are reading this article. It uses simple symbols to mark different titles, split different paragraphs, bold or italics some text.
 
-Most important, it can be used with vim and only you install some vim plugins, you can browser your note on Google chrome or Firefox. it is not so nice?
+Most importantly, it can be used with vim and you only need install some vim plugins, you can browser your note on Google chrome or Firefox.  Is it not so nice?
 
-Many product documents are also written in markdown, and are saved in the directory of the software under the filename "README.", expcial Github.
+Many product documents are also written in markdown, and are saved in the directory of the software under the filename "README.", especial Github.
 　　
-### Some common synyax
+### Some common syntax
 
-Tilte            
+Title            
 H1 :# Header 1            
 H2 :## Header 2           
 H3 :### Header 3           

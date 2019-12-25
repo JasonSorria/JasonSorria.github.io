@@ -10,7 +10,7 @@ Usually like sorting out my blog, surfing on Github, learning Computer network.
 Know some basic concepts of C/C++ Linux shell.
 <p>
 
-<h3> We blog </h3>  
+<h3> Our blog </h3>  
 
 <p>
 

@@ -7,7 +7,7 @@ tags: comfortSurfing
 
 ## Today, i will share how to comfortably surfing by build GCP+V2ray+WebSocks+tls.
 
-## It is sounds difficult, but it is real complex, please pay a attention to following me.
+## It sounds difficult, but it is real complex, please pay a attention to follow me.
 
 ## Content:
 
@@ -34,7 +34,7 @@ tags: comfortSurfing
 
 --------
 
-**The reasons why i recommand this platform are is that it will give you one year and $300 to use its server for free only need a Visa Card. i believe your all partners who may exist a person has Visa Card. unfortunately, i only recommand [Vultr](http://bwg.yiqimaila.com/vt/).**
+**The reasons why i recommand this platform are that it will give you one year and $300 to use its server for free only need a Visa Card. i believe your all partners who may exist a person has Visa Card. unfortunately, i only recommand [Vultr](http://bwg.yiqimaila.com/vt/).**
 
 **Configure your VPS:**
 

@@ -40,4 +40,4 @@ $ sudo ip link # to look your network cards interface.
 
 >Q: why i still do not connect Ethernet?
 
->A: it may following some aspects: 1.you can wait a while because it will verify your ppp personal informatiosn. 2.after you use WIFI, you also can not to connect and i don not known why. 3.check your cable.
+>A: it may following some aspects: 1.you can wait a while because it will verify your PPP personal informations. 2.after you use WIFI, you also can not to connect even if you shut down your network card to connect Ethernet again. 3.check your cable.
