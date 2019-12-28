@@ -9,9 +9,9 @@ tags: linux
 
 I guest that you may get bored with your traditional keyboard binding and many usually key are not at these positions in which you can convenient to touch. Today i will share a powerful and easy-to-use application named xmodmap who is a part of family of Xorg and supports permanent modify your traditional keyboard binding, so you should install some dependence of Xorg. 
 
-### Install
+### Steps
 
-**download:**
+**1 download:**
 
 `$ sudo pacman -S xorg`
 
@@ -19,7 +19,7 @@ I guest that you may get bored with your traditional keyboard binding and many u
 
 `$ xmodmap`
 
-![](/images/posts/ketborad/1.png)
+![](/images/posts/keyborad/1.png)
 
 **3 show id of your of all keybord layouts:**
 
@@ -99,4 +99,5 @@ keycode  55 = v V v V
 ### Q&A
 
 >Q: Why it will come to become the old form each when i startup my Manjaro linux ?
+
 >A: If i3-wm is your desktop application, it is a common thing you only need add `xmodmap ~/.xmodmap` in your Linux shell and auto execute it when you start up your system. And there is a other thing that when you plug your physical keyboard you must need execute `xmodmap ~/.xmodmap`  again.
