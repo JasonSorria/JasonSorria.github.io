@@ -363,7 +363,7 @@ If you have installed another code comletion plugins, i advise you delete all of
 
 Do `$ pip3 install flake8` for coding check like that:
 
-![](/images/posts/plugin/2/png)
+![](/images/posts/plugin/2.png)
 
 Run `$ sudo pacman -S ctags` for function/class/variable list. When your define your function at `C/C++` you can see some function/class/variale list, which is so comvironent.
 
