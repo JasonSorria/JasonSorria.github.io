@@ -9,6 +9,10 @@ tags: linux
 
 With the growth of Linux user, we can not avoid to not use `vim` and code become a common thing edited by `vim`. So you guess you must bored with `vim` and always ask why `vim` has not code completion. I also believe you have install or try some code completion plugins. Otherwise you will not find this article. Today i will share a powerful and easy-to-use plugin named COC.
 
+> Effect:
+
+![](../images/posts/plugin/1.gif)
+
 ### Content
 
 * What COC plugin
