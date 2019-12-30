@@ -19,8 +19,10 @@ Jekyll is a free simple static web page generation tool, which can cooperate wit
 Install jekyll
 
 ```     
-$ gem install jekyll     
+$ gem install jekyll bundler    
 ```    
+
+If you see that `WARNING:  You don't have $HOME/.gem/ruby/2.6.0/bin in your PATH, gem executables will not run.` add this path into your system environment value.(if you do not kown how to add system environment value you can see my [this article]() to get more details). 
 
 Create blog
 
@@ -39,6 +41,29 @@ Startup local service
 ```
 $ jekyll serve
 ```
+
+If you encounter the following problems:
+
+```vim
+Traceback (most recent call last):
+	15: from /home/sorria/.gem/ruby/2.6.0/bin/jekyll:23:in `<main>'
+	14: from /home/sorria/.gem/ruby/2.6.0/bin/jekyll:23:in `load'
+	13: from /home/sorria/.gem/ruby/2.6.0/gems/jekyll-4.0.0/exe/jekyll:11:in `<top (required)>'
+	12: from /home/sorria/.gem/ruby/2.6.0/gems/jekyll-4.0.0/lib/jekyll/plugin_manager.rb:52:in `require_from_bundler'
+	11: from /home/sorria/.gem/ruby/2.6.0/gems/bundler-2.1.2/lib/bundler.rb:149:in `setup'
+	10: from /home/sorria/.gem/ruby/2.6.0/gems/bundler-2.1.2/lib/bundler/runtime.rb:20:in `setup'
+	 9: from /home/sorria/.gem/ruby/2.6.0/gems/bundler-2.1.2/lib/bundler/runtime.rb:101:in `block in definition_method'
+	 8: from /home/sorria/.gem/ruby/2.6.0/gems/bundler-2.1.2/lib/bundler/definition.rb:226:in `requested_specs'
+	 7: from /home/sorria/.gem/ruby/2.6.0/gems/bundler-2.1.2/lib/bundler/definition.rb:237:in `specs_forn
+	 6: from /home/sorria/.gem/ruby/2.6.0/gems/bundler-2.1.2/lib/bundler/definition.rb:170:in `specs'
+	 5: from /home/sorria/.gem/ruby/2.6.0/gems/bundler-2.1.2/lib/bundler/definition.rb:258:in `resolve'
+	 4: from /home/sorria/.gem/ruby/2.6.0/gems/bundler-2.1.2/lib/bundler/resolver.rb:22:in `resolve'
+	 3: from /home/sorria/.gem/ruby/2.6.0/gems/bundler-2.1.2/lib/bundler/resolver.rb:49:in `start'
+	 2: from /home/sorria/.gem/ruby/2.6.0/gems/bundler-2.1.2/lib/bundler/resolver.rb:258:in `verify_gemfile_dependencies_are_found!'
+	 1: from /home/sorria/.gem/ruby/2.6.0/gems/bundler-2.1.2/lib/bundler/resolver.rb:258:in `each'
+/home/sorria/.gem/ruby/2.6.0/gems/bundler-2.1.2/lib/bundler/resolver.rb:290:in `block in verify_gemfile_dependencies_are_found!': Could not find gem 'minima (~> 2.5)' in any of the gem sources listed in your Gemfile. (Bundler::GemNotFound)
+```
+Only do you do is follow its tips to resolve it. Such as `gem install minima`. if it still throws an error, do it again. 
 
 Input [http://localhost:4000](http://localhost:4000) on browse, you can see this effect.
 
