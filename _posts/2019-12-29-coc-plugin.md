@@ -5,6 +5,8 @@ date: 2019-12-29
 tags: linux   
 ---
 
+#### [中文版README]() by [@JasonSorria](https://github.com/JasonSorria)
+
 ### Introduction
 
 With the growth of Linux user, we can not avoid to not use `vim` and code become a common thing edited by `vim`. So you guess you must bored with `vim` and always ask why `vim` has not code completion. I also believe you have install or try some code completion plugins. Otherwise you will not find this article. Today i will share a powerful and easy-to-use plugin named COC.
@@ -15,11 +17,11 @@ With the growth of Linux user, we can not avoid to not use `vim` and code become
 
 ### Content
 
-* What COC plugin
+- [ ] What COC plugin
 
-* Requirements
+- [ ] Requirements
 
-* Installation
+- [ ] Installation
     
     * install neovim
 
@@ -27,7 +29,7 @@ With the growth of Linux user, we can not avoid to not use `vim` and code become
 
     * load plugins
 
-* Add COC plugin
+- [ ] Add COC plugin
 
     * load some dependences
 
@@ -35,7 +37,7 @@ With the growth of Linux user, we can not avoid to not use `vim` and code become
 
     * read its key-mapping
 
-* Add language servers
+- [ ] Add language servers
 
     * configure JASON file
 
@@ -43,11 +45,11 @@ With the growth of Linux user, we can not avoid to not use `vim` and code become
 
     * install code-check tools
 
-* Debug
+- [ ] Debug
 
-* Some useful tips
+- [ ] Some useful tips
 
-* Q&A
+- [ ] Q&A
 
 --------
 
