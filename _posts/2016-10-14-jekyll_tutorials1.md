@@ -22,7 +22,7 @@ Install jekyll
 $ gem install jekyll bundler    
 ```    
 
-If you see that `WARNING:  You don't have $HOME/.gem/ruby/2.6.0/bin in your PATH, gem executables will not run.` add this path into your system environment value.(if you do not kown how to add system environment value you can see my [this article]() to get more details). 
+If you see that `WARNING:  You don't have $HOME/.gem/ruby/2.6.0/bin in your PATH, gem executables will not run.` add this path into your system environment value.(if you do not kown how to add system environment value you can see my [this article](https://jasonsorria.github.io/2019/12/system-environment/) or [my github](https://github.com/JasonSorria/linux/blob/master/problem_logs/system-environment.md) to get more details). 
 
 Create blog
 
