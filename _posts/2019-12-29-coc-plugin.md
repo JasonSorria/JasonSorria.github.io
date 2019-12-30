@@ -5,11 +5,11 @@ date: 2019-12-29
 tags: linux   
 ---
 
-#### [中文版README]() by [@JasonSorria](https://github.com/JasonSorria)
+#### [中文版README](https://github.com/JasonSorria/linux/blob/master/problem_logs/Coc-plugin/README_cn.md) by [@JasonSorria](https://github.com/JasonSorria)
 
 ### Introduction
 
-With the growth of Linux user, we can not avoid to not use `vim` and code become a common thing edited by `vim`. So you guess you must bored with `vim` and always ask why `vim` has not code completion. I also believe you have install or try some code completion plugins. Otherwise you will not find this article. Today i will share a powerful and easy-to-use plugin named COC.
+With the growth of Linux user, we can not avoid to not use `vim` and code become a common thing edited by `vim`. So i guess you must bored with `vim` and always ask why `vim` has not code completion. I also believe you have install or try some code completion plugins. Otherwise you will not find this article. Today i will share a powerful and easy-to-use plugin named COC.
 
 > Effect:
 
@@ -39,7 +39,7 @@ With the growth of Linux user, we can not avoid to not use `vim` and code become
 
 - [ ] Add language servers
 
-    * configure JASON file
+    * configure JSON file
 
     * install some language servers
 
@@ -371,7 +371,7 @@ Do `$ pip3 install flake8` for coding check like that:
     
 ![](/images/posts/plugin/2.png)
 
-Run `$ sudo pacman -S ctags` for function/class/variable list. When your define your function at `C/C++` you can see some function/class/variale list, which is so comvironent.
+Run `$ sudo pacman -S ctags` for function/class/variable list. When your define your function at `C/C++` you can see some function/class/variale list, which is so convenient.
 
 --------
 
