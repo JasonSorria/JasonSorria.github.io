@@ -105,23 +105,23 @@ tags: comfortSurfing
 
 **Change nameservers.**
 
-![picture loading](/iamges/posts/v2ray10.PNG)
+![picture loading](/iamges/posts/v2ray/10.PNG)
 
 **In Cloudflare web page, into interface of DNS.** 
 
 **In Cloudflare web page, find DBSSEC and add its information to Namesilo web page.**
 
-![picture loading](/iamges/posts/v2ray11.PNG)
+![picture loading](/iamges/posts/v2ray/11.PNG)
 
-![picture loading](/iamges/posts/v2ray12.PNG)
+![picture loading](/iamges/posts/v2ray/12.PNG)
 
 **In Namesilo, find DS Records and add some DNSSEC information.**
 
-![picture loading](/iamges/posts/v2ray9.PNG)
+![picture loading](/iamges/posts/v2ray/9.PNG)
 
 **Match information.**
 
-![picture loading](/iamges/posts/v2ray13.PNG)
+![picture loading](/iamges/posts/v2ray/13.PNG)
 
 
 ### 4. Product verification.
@@ -131,7 +131,7 @@ tags: comfortSurfing
 
 **Use [FreeSSL](https://freessl.cn/) to product verification for free.**
 
-![picture loading](/iamges/posts/v2ray14.PNG)
+![picture loading](/iamges/posts/v2ray/14.PNG)
 
 
 ### 5. Add TXT record for your VPS.
@@ -142,17 +142,17 @@ tags: comfortSurfing
 
 **Add a TXT record at Cloudflare web page using this information.**
 
-![picture loading](/iamges/posts/v2ray15.PNG)
+![picture loading](/iamges/posts/v2ray/15.PNG)
 
 - **After add this information, first to click 1 to check, if the results are similar as following picture(at least two matchs), you can click 2 to continue.**
 
-![picture loading](/iamges/posts/v2ray17.PNG)
+![picture loading](/iamges/posts/v2ray/17.PNG)
 
-![picture loading](/iamges/posts/v2ray16.PNG)
+![picture loading](/iamges/posts/v2ray/16.PNG)
 
 - **if your steps era right, you will get something are similar as the following picture.**
 
-![picture loading](/iamges/posts/v2ray18.PNG)
+![picture loading](/iamges/posts/v2ray/18.PNG)
 
 **Copy the conents of your private key into a txt file and rename it to your-domain.key.(such as xxoo.key)**
 
@@ -164,7 +164,7 @@ tags: comfortSurfing
 
 **Use this [tool](https://v2.ziyls.com/) to auto product json file.**
 
-![picture loading](/iamges/posts/v2ray19.PNG)
+![picture loading](/iamges/posts/v2ray/19.PNG)
 
 **Click 1 to product JSON file and click 2 to product QR code**
 
