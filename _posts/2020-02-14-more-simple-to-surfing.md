@@ -79,3 +79,20 @@ In last article i have written how to configure it.
 
         https://github.com/FelisCatus/SwitchyOmega/releases and how to configure SwitchyOmega you can see this [article](http://www.modys.top/ubuntu-configuration-google-browser-shadowsocks-proxy-online.html) to get more detail.    
 
+    - proxychains:
+
+        `$ sudo pacman -S proxychains`
+    
+        `vim /etc/proxychains.conf` add one line `socks5 127.0.0.1 [port]` information in the bottom    
+
+        such as:
+
+        ```shell
+        [ProxyList]
+        # add proxy here ...
+        # meanwile
+        # defaults set to "tor"
+        #socks4 	127.0.0.1 9050
+        socks5 	127.0.0.1 10808
+        ```
+        usage: `proxychains [your application]`, such as: `proxychains ping www.google.com` 
