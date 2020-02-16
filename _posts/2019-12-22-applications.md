@@ -2,7 +2,7 @@
 layout: post
 title: Some applications on manjaro linux
 date: 2019-12-22 
-tags: linux   
+tags: Applications
 ---
 
 ### Update system source

@@ -2,7 +2,7 @@
 layout: post
 title: Use postfix and dovecot to build own mail-server
 date: 2020-01-06
-tags: linux   
+tags: Server
 ---
 
 ### Today, i will share how to build your own mail-server by postfix and devecot under CentOS 7.

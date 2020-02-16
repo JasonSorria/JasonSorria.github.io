@@ -2,7 +2,7 @@
 layout: post
 title: Markdown syntax and some tools
 date: 2019-12-24
-tags: linux    
+tags: Markdown
 ---
 
 
