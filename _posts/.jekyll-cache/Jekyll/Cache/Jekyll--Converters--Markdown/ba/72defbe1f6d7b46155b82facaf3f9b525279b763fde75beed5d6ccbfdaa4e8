@@ -1,0 +1,193 @@
+I"H<h3 id="what-markdown">What Markdown</h3>
+
+<p>Markdown is a plain text markup language that is easy to remember and write. Users can use these markup symbols to generate expressive documents at the lowest input cost: as you are reading this article. It uses simple symbols to mark different titles, split different paragraphs, bold or italics some text.</p>
+
+<p>Most importantly, it can be used with vim and you only need install some vim plugins, you can browser your note on Google chrome or Firefox.  Is it not so nice?</p>
+
+<p>Many product documents are also written in markdown, and are saved in the directory of the software under the filename “README.”, especial Github.
+　　</p>
+<h3 id="some-common-syntax">Some common syntax</h3>
+
+<p>Title          <br />
+H1 :# Header 1          <br />
+H2 :## Header 2         <br />
+H3 :### Header 3         <br />
+H4 :#### Header 4         <br />
+H5 :##### Header 5          <br />
+H6 :###### Header 6</p>
+
+<blockquote>
+  <p>effect:</p>
+</blockquote>
+
+<h1 id="header-1">Header 1</h1>
+<h2 id="header-2">Header 2</h2>
+<h3 id="header-3">Header 3</h3>
+<h4 id="header-4">Header 4</h4>
+<h5 id="header-5">Header 5</h5>
+<h6 id="header-6">Header 6</h6>
+
+<p>======================================================</p>
+
+<p>Url link:<code class="highlighter-rouge">[Title](URL)</code>.</p>
+
+<p>Picture: <code class="highlighter-rouge">![Picture](/picture-path)</code></p>
+
+<blockquote>
+  <p>effect:</p>
+</blockquote>
+
+<p><a href="localhost">localhost</a></p>
+
+<p><img src="/images/posts/markdown/test.png" alt="" /></p>
+
+<p>======================================================</p>
+
+<p>Bold :<code class="highlighter-rouge">**Bold**</code>.</p>
+
+<p>Italics :<code class="highlighter-rouge">*Italics*</code>.</p>
+
+<p>Bold and italics :<strong><em>bold and Italics</em></strong></p>
+
+<blockquote>
+  <p>effect:</p>
+</blockquote>
+
+<p><strong>bold</strong></p>
+
+<p><em>Italics</em></p>
+
+<p><strong><em>bold and Italics</em></strong></p>
+
+<p>======================================================</p>
+
+<p>show code : <code class="highlighter-rouge">alert('Hello World');</code>      <br />
+show code : <code class="highlighter-rouge">alert('Hello World');</code></p>
+
+<blockquote>
+  <p>effect:</p>
+</blockquote>
+
+<p><code class="highlighter-rouge">Hello World</code></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>this is a pice of code
+</code></pre></div></div>
+<p>you can modify the syntax hightlight like shell,C/C++…</p>
+
+<p>======================================================</p>
+
+<p>Delect line :<code class="highlighter-rouge">~~text~~</code>.</p>
+
+<blockquote>
+  <p>effect:</p>
+</blockquote>
+
+<p><del>text</del></p>
+
+<p>======================================================</p>
+
+<p>List: add *,+,- to become a new list item.</p>
+
+<p>List include: need Enter+ three Space</p>
+
+<blockquote>
+  <p>effect:</p>
+</blockquote>
+
+<ul>
+  <li>item</li>
+  <li>item</li>
+  <li>
+    <p>item</p>
+  </li>
+  <li>item fater
+    <ul>
+      <li>item child
+        <ul>
+          <li>item baby
+            <ul>
+              <li>item cell</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>======================================================</p>
+
+<p>Reference : &gt; reference contents.             <br />
+Reference : » refrence contents.             <br />
+Reference : »&gt; refrence contents.             <br />
+Reference : &gt;* refrence contents.</p>
+
+<p>effect:</p>
+
+<blockquote>
+  <p>refrence</p>
+  <blockquote>
+    <p>refrence</p>
+    <blockquote>
+      <p>refrence</p>
+      <ul>
+        <li>refrence</li>
+      </ul>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<p>======================================================</p>
+
+<p>Paragraph: empty line between paragraphs.</p>
+
+<p>======================================================</p>
+
+<p>Line break: enter two spaces at the end of a line.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">---
+</span><span class="gd">----
+</span><span class="err">***</span>
+****
+</code></pre></div></div>
+<blockquote>
+  <p>effect:</p>
+</blockquote>
+
+<hr />
+<hr />
+<hr />
+<hr />
+
+<p>======================================================</p>
+
+<p>Most of the syntax of CSS can also be used on markdown, but different renderers render different markdown content styles. The following links contain markdown basic syntax. You can also try to write some on the following platforms.</p>
+
+<h3 id="some-nice-markdown-editor">Some nice Markdown editor</h3>
+
+<p><a href="http://mahua.jser.me/?utm_source=mindstore.io">MaHua</a> online Markdown editor and not to debug.</p>
+
+<p><a href="http://mdp.tylingsoft.com/">Markdown Plus</a> a powerful Markdown editor which supports to add task,emoji and flow chart.</p>
+
+<p><a href="https://www.zybuluo.com/cmd/?utm_source=mindstore.io">Cmd Markdown</a> a powerful and cross-platform Markdown editor and it has released desktop client.</p>
+
+<p><a href="https://github.com/MacDownApp/macdown">Macdown</a> a open source project on Github and support Mac OS.</p>
+
+<p><a href="https://www.gitbook.com/editor?utm_source=mindstore.io">GitBook Editor</a> a online tool supporting multiple user to edit. it can write note easily and support all team togather to edit, espacially it remian the style of YingXiang note.</p>
+
+<p><a href="http://www.glamdevelopment.com/outlinely?utm_source=mindstore.io">Outlinely</a> a Mac application which owns simple and elegant interface and easy to use, and support syntax of Markdown.</p>
+
+<p><a href="http://classeur.io/?utm_source=mindstore.io">Classeur</a> easy to use and own simple and elegant interface.</p>
+
+<p><a href="https://github.com/geekcompany/DeerResume?utm_source=mindstore.io">DeerResume</a> a online tool for programmer to make resume.</p>
+
+<h3 id="qa">Q&amp;A</h3>
+
+<blockquote>
+  <p>Q:</p>
+</blockquote>
+
+<blockquote>
+  <p>A:</p>
+</blockquote>
+:ET

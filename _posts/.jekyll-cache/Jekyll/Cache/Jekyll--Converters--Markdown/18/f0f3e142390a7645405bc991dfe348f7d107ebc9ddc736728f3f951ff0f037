@@ -1,0 +1,251 @@
+I"Z'<h2 id="today-i-will-share-how-to-comfortably-surfing-by-build-gcpv2raywebsockstls">Today, i will share how to comfortably surfing by build GCP+V2ray+WebSocks+tls.</h2>
+
+<h2 id="it-sounds-difficult-but-it-is-real-complex-please-pay-a-attention-to-follow-me">It sounds difficult, but it is real complex, please pay a attention to follow me.</h2>
+
+<h2 id="content">Content:</h2>
+
+<h4 id="1-you-should-have-a-abroad-server-i-recommend-google-cloud-platform">1. You should have a abroad server, i recommend <a href="https://cloud.google.com/">Google Cloud Platform</a></h4>
+
+<h4 id="2-you-need-a-international-domainyou-can-buy-one-easy-and-cheap">2. You need a international domain,you can buy one easy and cheap</h4>
+
+<h4 id="3-analysis-your-domain-to-your-vps-and-add-cdn-and-dnssec">3. Analysis your domain to your VPS and add CDN and DNSSEC</h4>
+
+<h4 id="4-product-verification">4. Product verification</h4>
+
+<h4 id="5-add-txt-record-for-your-vps">5. Add TXT record for your VPS</h4>
+
+<h4 id="6-output-configuration-file">6. Output configuration file</h4>
+
+<h2 id="before-start-do-it-i-want-to-suggest-that-it-may-take-long-time-to-do-it-so-i-will-you-can-insist-to-end">Before start do it, i want to suggest that it may take long time to do it, so i will you can insist to end.</h2>
+
+<h2 id="let-us-start">Let us start.</h2>
+
+<h3 id="1-you-should-have-a-abroad-server-i-recommend-google-cloud-platform-1">1. You should have a abroad server, i recommend <a href="https://cloud.google.com/">Google Cloud Platform</a>.</h3>
+
+<hr />
+
+<hr />
+
+<p><strong>The reasons why i recommand this platform are that it will give you one year and $300 to use its server for free only need a Visa Card. i believe your all partners who may exist a person has Visa Card. unfortunately, i only recommand <a href="http://bwg.yiqimaila.com/vt/">Vultr</a>.</strong></p>
+
+<p><strong>Configure your VPS:</strong></p>
+
+<ul>
+  <li>
+    <p><strong>Creat a new one.</strong></p>
+  </li>
+  <li>
+    <p><strong>Recommand Los Angeles, memory &gt; 1G, CentOS 7.</strong></p>
+  </li>
+</ul>
+
+<p><img src="/images/posts/v2ray/1.PNG" alt="" /></p>
+
+<ul>
+  <li>
+    <p><strong>Opent your server firewall and cloud safe group(if you feel trouble you can close firewall), open 22, 80, 443.</strong></p>
+
+    <p><code class="highlighter-rouge">$ sudo -i</code></p>
+
+    <p><code class="highlighter-rouge">$ passwd</code></p>
+
+    <p><code class="highlighter-rouge">vim /etc/ssh/sshd_conf</code> set allow root to login to yes</p>
+
+    <p><code class="highlighter-rouge">$ systemctl start firewall.service</code></p>
+
+    <p><code class="highlighter-rouge">$ firewall-cmd --zone=public --parmanent --add-port=443/tcp</code></p>
+
+    <p><code class="highlighter-rouge">$ systemctl restart firewall.service</code></p>
+  </li>
+  <li>
+    <p><strong>After complete, you can use Xshell to login</strong></p>
+  </li>
+  <li>
+    <p><strong>You also see <a href="https://blog.csdn.net/sxt_zls/article/details/89449843">his blog</a> to get more details</strong></p>
+  </li>
+</ul>
+
+<h3 id="2-you-need-a-international-domainyou-can-buy-one-at-namesilo">2. You need a international domain,you can buy one at <a href="https://www.namesilo.com/account_home.php">namesilo</a>.</h3>
+
+<hr />
+
+<hr />
+
+<p><strong>Regester a domain and this site it support AliPay, so it is very nice.</strong></p>
+
+<p><img src="/images/posts/v2ray/2.PNG" alt="picture loading" /></p>
+
+<p><strong>Into the interface of Manage Your Domain.</strong></p>
+
+<p><img src="/images/posts/v2ray/3.PNG" alt="picture loading" /></p>
+
+<h3 id="3-analysis-your-domain-to-your-vps-and-add-cdn-and-dnssec-1">3. Analysis your domain to your VPS and add CDN and DNSSEC.</h3>
+
+<hr />
+
+<hr />
+
+<p><strong>Go to <a href="https://dash.cloudflare.com/430bb5774e5536405074533cfde78dad/add-site">Cloudflare</a> to analysis your domain for free(you may get trouble like this, do not worried and wait a while).</strong></p>
+
+<p><img src="/images/posts/v2ray/4.PNG" alt="picture loading" /></p>
+
+<p><strong>The first domain has been analysised but the secend one is not complete, so wait a while.</strong></p>
+
+<p><img src="/images/posts/v2ray/6.PNG" alt="picture loading" /></p>
+
+<p><strong>Add A record for your server.</strong></p>
+
+<p><img src="/images/posts/v2ray/5.PNG" alt="picture loading" /></p>
+
+<p><strong>In Cloudflare web page, using following two DNS servers to Namesilo web page.</strong></p>
+
+<p><img src="/images/posts/v2ray/7.PNG" alt="picture loading" /></p>
+
+<p><strong>In Namesilo web page, into interface of Change Nameservers.</strong></p>
+
+<p><img src="/images/posts/v2ray/8.PNG" alt="picture loading" /></p>
+
+<p><strong>Change nameservers.</strong></p>
+
+<p><img src="/images/posts/v2ray/10.PNG" alt="picture loading" /></p>
+
+<p><strong>In Cloudflare web page, into interface of DNS.</strong></p>
+
+<p><strong>In Cloudflare web page, find DBSSEC and add its information to Namesilo web page.</strong></p>
+
+<p><img src="/images/posts/v2ray/11.PNG" alt="picture loading" /></p>
+
+<p><img src="/images/posts/v2ray/12.PNG" alt="picture loading" /></p>
+
+<p><strong>In Namesilo, find DS Records and add some DNSSEC information.</strong></p>
+
+<p><img src="/images/posts/v2ray/9.PNG" alt="picture loading" /></p>
+
+<p><strong>Match information.</strong></p>
+
+<p><img src="/images/posts/v2ray/13.PNG" alt="picture loading" /></p>
+
+<h3 id="4-product-verification-1">4. Product verification.</h3>
+
+<hr />
+<hr />
+
+<p><strong>Use <a href="https://freessl.cn/">FreeSSL</a> to product verification for free.</strong></p>
+
+<p><img src="/images/posts/v2ray/14.PNG" alt="picture loading" /></p>
+
+<h3 id="5-add-txt-record-for-your-vps-1">5. Add TXT record for your VPS.</h3>
+
+<hr />
+
+<hr />
+
+<p><strong>Add a TXT record at Cloudflare web page using this information.</strong></p>
+
+<p><img src="/images/posts/v2ray/15.PNG" alt="picture loading" /></p>
+
+<ul>
+  <li><strong>After add this information, first to click 1 to check, if the results are similar as following picture(at least two matchs), you can click 2 to continue.</strong></li>
+</ul>
+
+<p><img src="/images/posts/v2ray/17.PNG" alt="picture loading" /></p>
+
+<p><img src="/images/posts/v2ray/16.PNG" alt="picture loading" /></p>
+
+<ul>
+  <li><strong>if your steps era right, you will get something are similar as the following picture.</strong></li>
+</ul>
+
+<p><img src="/images/posts/v2ray/18.PNG" alt="picture loading" /></p>
+
+<p><strong>Copy the conents of your private key into a txt file and rename it to your-domain.key.(such as xxoo.key)</strong></p>
+
+<p><strong>Copy the conents of your CA into a txt file and rename it to your-domain.pem.(xxoo.pem)</strong></p>
+
+<p><strong>The two file are your veritification end private key.</strong></p>
+
+<h3 id="6-output-configuration-file-1">6. Output configuration file.</h3>
+
+<p><strong>Use this <a href="https://v2.ziyls.com/">tool</a> to auto product json file.</strong></p>
+
+<p><img src="/images/posts/v2ray/19.PNG" alt="picture loading" /></p>
+
+<p><strong>Click 1 to product JSON file and click 2 to product QR code</strong></p>
+
+<p><strong>If you still follow me to there, you will get a JSON file that is V2ray needs, a KEY file and a PEM file.</strong></p>
+
+<h3 id="7-test-with-v2ray">7. Test with V2ray.</h3>
+
+<p><strong>Configure it again.</strong></p>
+
+<p><code class="highlighter-rouge">su root</code></p>
+
+<ul>
+  <li><strong>Startup BBR.</strong></li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"net.core.default_qdisc=fq"</span> <span class="o">&gt;&gt;</span> /etc/sysctl.conf
+<span class="nb">echo</span> <span class="s2">"net.ipv4.tcp_congestion_control=bbr"</span> <span class="o">&gt;&gt;</span> /etc/sysctl.conf
+sysctl <span class="nt">-p</span>
+sysctl net.ipv4.tcp_available_congestion_control
+lsmod | <span class="nb">grep </span>bbr
+</code></pre></div></div>
+<ul>
+  <li><strong>Install V2ray.</strong></li>
+</ul>
+
+<p><code class="highlighter-rouge">bash &lt;(curl -L -s https://install.direct/go.sh)</code></p>
+
+<ul>
+  <li><strong>Create directory.</strong></li>
+</ul>
+
+<p><code class="highlighter-rouge">mkdir /etc/your-domain</code> such as /etc/xxoo.com</p>
+
+<ul>
+  <li>
+    <p><strong>Copy json file to <code class="highlighter-rouge">/etc/v2ray</code> and copy KEY file and PEM file to <code class="highlighter-rouge">/etc/your-domain/</code>.</strong></p>
+  </li>
+  <li>
+    <p><strong>Startup V2ray.</strong></p>
+  </li>
+</ul>
+
+<p><code class="highlighter-rouge">systemctl restart v2ray.service</code></p>
+
+<p><strong>Install V2ray under Window10.</strong></p>
+
+<ul>
+  <li>
+    <p><strong>Download <a href="https://github.com/v2ray/v2ray-core/releases">V2ray-windows-64.zip</a> and <a href="https://github.com/2dust/v2rayN/releases">V2rayN.zip</a>.</strong></p>
+  </li>
+  <li>
+    <p><strong>Unzip the V2rayN.zip and you will get V2rayN.exe which you should put it to the directory of V2ray-windows-64.</strong></p>
+  </li>
+  <li>
+    <p><strong>Startup your V2ray and configure it, this domain is your pretend address for which i recommand you add a vedio address because your VPS should run always.</strong></p>
+  </li>
+</ul>
+
+<p><img src="/images/posts/v2ray/20.PNG" alt="picture loading" /></p>
+
+<p><strong>Install V2ray under Linux.</strong></p>
+
+<ul>
+  <li><strong>test speed</strong></li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>wget https://raw.github.com/sivel/speedtest-cli/master/speedtest.py
+<span class="nv">$ </span><span class="nb">chmod </span>a+rx speedtest.py
+<span class="nv">$ </span><span class="nb">mv </span>speedtest.py /usr/local/bin/speedtest
+<span class="nv">$ </span><span class="nb">chown </span>root:root /usr/local/bin/speedtest
+<span class="nv">$ </span>speedtest
+</code></pre></div></div>
+
+<h3 id="if-you-have-any-problems-you-can-contact-with-me-and-send-it-to-me">If you have any problems, you can contact with me and send it to me.</h3>
+
+<p>coolshark@sorria-linux.club</p>
+
+<p>jason10032992@gmail.com</p>
+
+:ET

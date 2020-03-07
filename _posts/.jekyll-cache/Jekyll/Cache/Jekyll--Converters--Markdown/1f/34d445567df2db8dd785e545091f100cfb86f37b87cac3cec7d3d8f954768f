@@ -1,0 +1,200 @@
+I"s#<h3 id="today-i-will-share-how-to-build-your-own-mail-server-by-postfix-and-devecot-under-centos-7">Today, i will share how to build your own mail-server by postfix and devecot under CentOS 7.</h3>
+
+<h3 id="first-and-foremost-some-tips-you-must-know">First and foremost, some tips you must know:</h3>
+
+<ul>
+  <li>
+    <p><strong>SMTP(Simple Mail Transfer Protocol): used to send mail, port:25</strong></p>
+  </li>
+  <li>
+    <p><strong>POP3(Post Office Protocol 3): used to store the mails you received in your local server, port: 110</strong></p>
+  </li>
+  <li>
+    <p><strong>IMAP(Internet Message Access Protocol 4): used to get mails form your local server, port: 143</strong></p>
+  </li>
+  <li>
+    <p><strong>postfix: provide the send mail service</strong></p>
+  </li>
+  <li>
+    <p><strong>devecat: provide the receive service</strong></p>
+  </li>
+  <li>
+    <p><strong>MUA(Mail User Agency): a kind of software that used to send or receive mail(outlook、thunderbird、Mac Mail、mutt)</strong></p>
+  </li>
+  <li>
+    <p><strong>MTA(Mali Transmission Agency): a kind of mail-server used to transmit mail(sendmail、postfix)</strong></p>
+  </li>
+  <li>
+    <p><strong>MDA(Mail Delivery Agent): as a intermediary betwen MUA and MTA used to filter junk mail(procmail、dropmail)</strong></p>
+  </li>
+  <li>
+    <p><strong>MRA(Mail Receive Agent): interact with MUA used to realise protocol of IMAP and POP3(devecot)</strong></p>
+  </li>
+  <li>
+    <p><strong>process: MUA -&gt; MTA -&gt; MTA -&gt; … -&gt; MDA -&gt; MTA -&gt; MRA -&gt; MUA</strong></p>
+  </li>
+</ul>
+
+<h3 id="test-local-environment">Test local environment:</h3>
+
+<p><strong>check your local firewall and cloud server’s safe groups:</strong></p>
+
+<p><strong>you should open ports: 25, 110, 143 (if you have used SSL, you also should open 465, 995, 993).</strong></p>
+
+<p><strong>into you cloud server’s console to add two records:</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@   MX   mail.your-domain                 //such as @ MX mail.xxoo.com
+
+mail A   your-ip                          //such as mail A  1.1.1.1
+</code></pre></div></div>
+
+<p><img src="/images/posts/mail/1.png" alt="" /></p>
+
+<p><strong>remove sendmail <code class="highlighter-rouge">$ yum remove sendmail</code> .</strong></p>
+
+<p><strong>modify hostname <code class="highlighter-rouge">$ hostnamectl set-hostname mail.xxoo.club</code> .</strong></p>
+
+<p><strong>modify MTA(the default mail transmission agency):</strong></p>
+
+<p><code class="highlighter-rouge">alternatives --config mta </code> press Enter to default choose</p>
+
+<p><strong>check it:</strong></p>
+
+<p><code class="highlighter-rouge">alternatives --config mta </code> if show <code class="highlighter-rouge">mat - status is manual</code> that OK</p>
+
+<h3 id="install-postfix-and-configure">Install postfix and configure:</h3>
+
+<p><strong>install postfix and configure it:</strong></p>
+
+<p><code class="highlighter-rouge">$ yum install postfix</code></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim /etc/postfix/main.cf
+
+<span class="c"># line 75: clear annotaton, set hostname </span>
+myhostname <span class="o">=</span> mail.xxoo.com 
+<span class="c"># line 83: clear annotaton, set domain </span>
+mydomain <span class="o">=</span> xxoo.com 
+<span class="c"># line 99: clear annotaton </span>
+myorigin <span class="o">=</span> <span class="nv">$mydomain</span> 
+<span class="c"># line 116: default is localhost, we should modify to all</span>
+inet_interfaces <span class="o">=</span> all 
+<span class="c"># line 119: recommand ipv4, if support ipv6, you can set all </span>
+inet_protocols <span class="o">=</span> ipv4 
+<span class="c"># line 164: add </span>
+mydestination <span class="o">=</span> <span class="nv">$myhostname</span>, localhost.<span class="nv">$mydomain</span>, localhost, <span class="nv">$mydomain</span> 
+<span class="c"># line 264:clear annotaton, set the range of inner network </span>
+mynetworks <span class="o">=</span> 127.0.0.0/8
+<span class="c"># line 419: clear annotaton, set the mail store directory</span>
+ home_mailbox <span class="o">=</span> Maildir/ 
+<span class="c"># line 571: add</span>
+smtpd_banner <span class="o">=</span> <span class="nv">$myhostname</span> ESMTP 
+
+<span class="c"># add to tail </span>
+<span class="c"># set the max size of mail 10M </span>
+message_size_limit <span class="o">=</span> 10485760 
+<span class="c"># set the capacity of mail 1G </span>
+mailbox_size_limit <span class="o">=</span> 1073741824 
+<span class="c"># SMTP authority </span>
+smtpd_sasl_type <span class="o">=</span> dovecot 
+smtpd_sasl_path <span class="o">=</span> private/auth 
+smtpd_sasl_auth_enable <span class="o">=</span> <span class="nb">yes
+</span>smtpd_sasl_security_options <span class="o">=</span> noanonymous 
+smtpd_sasl_local_domain <span class="o">=</span> <span class="nv">$myhostname</span> 
+smtpd_recipient_restrictions <span class="o">=</span> permit_mynetworks,permit_auth_destination,permit_sasl_authenticated,reject 
+</code></pre></div></div>
+<p><strong>set auto startup when you system startup:</strong></p>
+
+<p><code class="highlighter-rouge">$ systemctl  restart  postfix</code></p>
+
+<p><code class="highlighter-rouge">$ systemctl  enable  postfix</code></p>
+
+<h3 id="install-devecot-and-configure">Install devecot and configure:</h3>
+
+<p><strong>install devecot and configure it:</strong></p>
+
+<p><code class="highlighter-rouge">$ yum install devecot</code></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim /etc/dovecot/dovecot.conf 
+
+<span class="c"># line 26: if no use IPv6, please modify it to *  </span>
+listen <span class="o">=</span> <span class="k">*</span>
+<span class="c"># line 48: set the vistor who can use your mail server to send or receive mail, if you want to open it for all person, you can no modify this </span>
+login_trusted_networks <span class="o">=</span> 192.168.10.0/24
+<span class="nt">--------</span>
+
+vim /etc/dovecot/conf.d/10-auth.conf 
+
+<span class="c"># line 9: clear annotation and add </span>
+disable_plaintext_auth <span class="o">=</span> no 
+<span class="c"># line 97: add </span>
+auth_mechanisms <span class="o">=</span> plain login 
+<span class="nt">--------</span>
+
+vim /etc/dovecot/conf.d/10-mail.conf
+
+<span class="c"># line 30: clear annotation and add </span>
+mail_location <span class="o">=</span> maildir:~/Maildir
+<span class="nt">--------</span>
+
+vim /etc/dovecot/conf.d/10-master.conf
+
+<span class="c"># line 88-90: clear annotation and add Postfix smtp verification</span>
+unix_listener /var/spool/postfix/private/auth <span class="o">{</span> 
+mode <span class="o">=</span> 0666 
+user <span class="o">=</span> postfix
+group <span class="o">=</span> postfix
+<span class="o">}</span>
+<span class="nt">--------</span>
+
+<span class="c">#if you no use SSL, you should do followings</span>
+vim /etc/dovecot/conf.d/10-ssl.conf 
+
+<span class="c"># line 8: set the value of ssl to </span>
+ssl <span class="o">=</span> no
+</code></pre></div></div>
+
+<h3 id="test-and-check">Test and check:</h3>
+
+<p><strong>mail user is a part of system user, so create a user and set password</strong></p>
+
+<p><code class="highlighter-rouge">$ useradd admain</code></p>
+
+<p><code class="highlighter-rouge">$ passwd admin</code></p>
+
+<p><strong>use telnet to check the port 110</strong></p>
+
+<p><code class="highlighter-rouge">$ telnet 127.0.0.1 110</code></p>
+
+<p><strong>use Foxmail to login</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>the mail user is admin you just creat
+
+pop server is mail.xxoo.com that you add record at your cloud server
+
+smtp server is mail.xxoo.com
+</code></pre></div></div>
+
+<p><img src="/images/posts/mail/2.png" alt="" /></p>
+
+<p><strong>if you want to use it to receive mail, the receiver is admin@xxoo.com</strong></p>
+
+<h3 id="some-problem">Some problem:</h3>
+
+<p><strong>go to <code class="highlighter-rouge">/var/log/maillog</code> to see our mail journalists and error logs.</strong></p>
+
+<p><strong>why we only receive mail but no send mail because if you use the Ali cloud server or Tensent cloud server, they have block the port 25 in order to prevent you unorderly send junk mail. so, if you server is abroad machine, all functions are normal.</strong></p>
+
+<p><strong>if we send mail by our mail-server to other person, but he is not receive the mail, he should see her junk mail.</strong></p>
+
+<h4 id="refer-to-the-blogs">refer to the blogs:</h4>
+<p><a href="https://blog.csdn.net/weixin_36171533/article/details/84877769">https://blog.csdn.net/weixin_36171533/article/details/84877769</a></p>
+
+<p><a href="http://blog.sina.com.cn/s/blog_af19951a0102yz1j.html">http://blog.sina.com.cn/s/blog_af19951a0102yz1j.html</a></p>
+
+<p><a href="https://www.cnblogs.com/operationhome/p/9056870.html">https://www.cnblogs.com/operationhome/p/9056870.html</a></p>
+
+<h3 id="license">License</h3>
+
+<p><strong>SCTU</strong></p>
+
+:ET

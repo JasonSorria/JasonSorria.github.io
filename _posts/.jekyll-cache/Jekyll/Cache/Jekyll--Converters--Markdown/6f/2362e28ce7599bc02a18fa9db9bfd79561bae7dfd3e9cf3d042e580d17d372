@@ -1,0 +1,100 @@
+I"�<h3 id="introduction">Introduction</h3>
+
+<p>I guest that you may get bored with your traditional keyboard binding and many usually key are not at these positions in which you can convenient to touch. Today i will share a powerful and easy-to-use application named xmodmap who is a part of family of Xorg and supports permanent modify your traditional keyboard binding, so you should install some dependence of Xorg.</p>
+
+<h3 id="steps">Steps</h3>
+
+<p><strong>1 download:</strong></p>
+
+<p><code class="highlighter-rouge">$ sudo pacman -S xorg</code></p>
+
+<p><strong>2 show your recent keybord layouts:</strong></p>
+
+<p><code class="highlighter-rouge">$ xmodmap</code></p>
+
+<p><img src="/images/posts/keyborad/1.png" alt="" /></p>
+
+<p><strong>3 show id of your of all keybord layouts:</strong></p>
+
+<p><code class="highlighter-rouge">$ xev</code> when you press any keyboard you can see its id</p>
+
+<p><img src="/images/posts/keyborad/2.png" alt="" /></p>
+
+<p><strong>4 input your layouts into .xmodmap:</strong></p>
+
+<p><code class="highlighter-rouge">$ xmodmap -pke &gt; ~/.xmodmap &amp;&amp; vim .xmodmap</code></p>
+
+<p><strong>5 change key you want:</strong></p>
+
+<p>I recommend to change the Esc and CapLock because you will usually use key Esc when you edit your articles but the headache is the key Esc is far from your finger, which make you uncomfortable touch it.</p>
+
+<p>Change their contents behind the id and input ‘clear lock’ into header of file and ‘add lock = Cap_Lock’.</p>
+
+<p>This is my .xmodmap file and only change key Esc and key CapLoack.</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">clear</span> <span class="k">lock</span>
+
+keycode   <span class="m">8</span> <span class="p">=</span>
+keycode   <span class="m">9</span> <span class="p">=</span> Caps_Lock NoSymbol Caps_Lock
+keycode  <span class="m">10</span> <span class="p">=</span> <span class="m">1</span> exclam <span class="m">1</span> exclam
+keycode  <span class="m">11</span> <span class="p">=</span> <span class="m">2</span> at <span class="m">2</span> at
+keycode  <span class="m">12</span> <span class="p">=</span> <span class="m">3</span> numbersign <span class="m">3</span> numbersign
+keycode  <span class="m">13</span> <span class="p">=</span> <span class="m">4</span> dollar <span class="m">4</span> dollar
+keycode  <span class="m">14</span> <span class="p">=</span> <span class="m">5</span> percent <span class="m">5</span> percent
+keycode  <span class="m">15</span> <span class="p">=</span> <span class="m">6</span> asciicircum <span class="m">6</span> asciicircum
+keycode  <span class="m">16</span> <span class="p">=</span> <span class="m">7</span> ampersand <span class="m">7</span> ampersand
+keycode  <span class="m">17</span> <span class="p">=</span> <span class="m">8</span> asterisk <span class="m">8</span> asterisk
+keycode  <span class="m">18</span> <span class="p">=</span> <span class="m">9</span> parenleft <span class="m">9</span> parenleft
+keycode  <span class="m">19</span> <span class="p">=</span> <span class="m">0</span> parenright <span class="m">0</span> parenright
+keycode  <span class="m">20</span> <span class="p">=</span> minus underscore minus underscore
+keycode  <span class="m">21</span> <span class="p">=</span> equal plus equal plus
+keycode  <span class="m">22</span> <span class="p">=</span> BackSpace BackSpace BackSpace BackSpace NoSymbol NoSymbol Terminate_Server
+keycode  <span class="m">23</span> <span class="p">=</span> Tab ISO_Left_Tab Tab ISO_Left_Tab
+keycode  <span class="m">24</span> <span class="p">=</span> <span class="k">q</span> Q <span class="k">q</span> Q
+keycode  <span class="m">25</span> <span class="p">=</span> <span class="k">w</span> W <span class="k">w</span> W
+keycode  <span class="m">26</span> <span class="p">=</span> <span class="k">e</span> E <span class="k">e</span> E
+keycode  <span class="m">27</span> <span class="p">=</span> <span class="k">r</span> R <span class="k">r</span> R
+keycode  <span class="m">28</span> <span class="p">=</span> <span class="k">t</span> T <span class="k">t</span> T
+keycode  <span class="m">29</span> <span class="p">=</span> <span class="k">y</span> Y <span class="k">y</span> Y
+keycode  <span class="m">30</span> <span class="p">=</span> <span class="k">u</span> U <span class="k">u</span> U
+keycode  <span class="m">31</span> <span class="p">=</span> <span class="k">i</span> I <span class="k">i</span> I
+keycode  <span class="m">32</span> <span class="p">=</span> <span class="k">o</span> O <span class="k">o</span> O
+keycode  <span class="m">33</span> <span class="p">=</span> <span class="k">p</span> P <span class="k">p</span> P
+keycode  <span class="m">34</span> <span class="p">=</span> bracketleft braceleft bracketleft braceleft
+keycode  <span class="m">35</span> <span class="p">=</span> bracketright braceright bracketright braceright
+keycode  <span class="m">36</span> <span class="p">=</span> Return NoSymbol Return
+keycode  <span class="m">37</span> <span class="p">=</span> Control_L NoSymbol Control_L
+keycode  <span class="m">38</span> <span class="p">=</span> <span class="k">a</span> A <span class="k">a</span> A
+keycode  <span class="m">39</span> <span class="p">=</span> s S s S
+keycode  <span class="m">40</span> <span class="p">=</span> <span class="k">d</span> D <span class="k">d</span> D
+keycode  <span class="m">41</span> <span class="p">=</span> <span class="k">f</span> F <span class="k">f</span> F
+keycode  <span class="m">42</span> <span class="p">=</span> <span class="k">g</span> G <span class="k">g</span> G
+keycode  <span class="m">43</span> <span class="p">=</span> <span class="k">h</span> H <span class="k">h</span> H
+keycode  <span class="m">44</span> <span class="p">=</span> <span class="k">j</span> J <span class="k">j</span> J
+keycode  <span class="m">45</span> <span class="p">=</span> <span class="k">k</span> K <span class="k">k</span> K
+keycode  <span class="m">46</span> <span class="p">=</span> <span class="k">l</span> L <span class="k">l</span> L
+keycode  <span class="m">47</span> <span class="p">=</span> semicolon colon semicolon colon
+keycode  <span class="m">48</span> <span class="p">=</span> apostrophe quotedbl apostrophe quotedbl
+keycode  <span class="m">49</span> <span class="p">=</span> grave asciitilde grave asciitilde
+keycode  <span class="m">50</span> <span class="p">=</span> Shift_L NoSymbol Shift_L
+keycode  <span class="m">51</span> <span class="p">=</span> backslash bar backslash bar
+keycode  <span class="m">52</span> <span class="p">=</span> z Z z Z
+keycode  <span class="m">53</span> <span class="p">=</span> <span class="k">x</span> X <span class="k">x</span> X
+keycode  <span class="m">54</span> <span class="p">=</span> <span class="k">c</span> C <span class="k">c</span> C
+keycode  <span class="m">55</span> <span class="p">=</span> <span class="k">v</span> V <span class="k">v</span> V
+</code></pre></div></div>
+
+<p><strong>6 save config:</strong></p>
+
+<p><code class="highlighter-rouge">$ xmodmap ~/.xmodmap</code></p>
+
+<h3 id="qa">Q&amp;A</h3>
+
+<blockquote>
+  <p>Q: Why it will come to become the old form each when i startup my Manjaro linux ?</p>
+</blockquote>
+
+<blockquote>
+  <p>A: If i3-wm is your desktop application, it is a common thing you only need add <code class="highlighter-rouge">xmodmap ~/.xmodmap</code> in your Linux shell and auto execute it when you start up your system. And there is a other thing that when you plug your physical keyboard you must need execute <code class="highlighter-rouge">xmodmap ~/.xmodmap</code>  again.</p>
+</blockquote>
+:ET

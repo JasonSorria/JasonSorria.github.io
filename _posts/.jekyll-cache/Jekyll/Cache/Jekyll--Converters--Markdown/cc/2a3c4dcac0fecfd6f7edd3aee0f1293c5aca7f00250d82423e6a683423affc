@@ -1,0 +1,35 @@
+I"�<p>Sorry, I haven’t updated my blog for a long time. Many netizens didn’t answer the questions in time. I will continue to maintain my blog in the future. If you have any questions, just ask them directly. I will answer them as soon as possible. I hope you can support me a lot.</p>
+
+<p>Before that, I wrote an article <a href="https://jasonsorria.github.io/2016/10/jekyll_tutorials1/">Jekyll to built own blog again</a>. Please read this basic integration first. This article mainly talks about how to use and modify my blog theme. The content of the article includes the following points:</p>
+
+<ul>
+  <li>Modify basic blog information</li>
+  <li>Publish articles</li>
+  <li>Modify blog style</li>
+</ul>
+
+<p>The basic structure of the blog template root directory is:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.
+├── _config.yml
+├── _includes
+├── _layouts
+├── _posts
+├── _site
+├── 404.html
+├── about.md
+├── archive.html
+├── CNAME
+├── css
+├── feed.xml
+├── Gemfile
+├── Gemfile.lock
+├── images
+├── index.html
+├── js
+├── Rakefile
+├── README.md
+└── tags.html
+
+</code></pre></div></div>
+:ET

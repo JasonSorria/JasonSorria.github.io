@@ -9,8 +9,8 @@ avatarDesc: Linux / English
 url: "http://JasonSorria.github.io"
 
 # Comment
-comment:
-    disqus: Coolshark
+# comment:
+#disqus: Coolshark
     # gitment: xxx // 需要修改 comments.html中的client_id和client_secret
     # uyan: 2143225  # 有言id,登录有言官网申请
 
@@ -26,13 +26,11 @@ social:
 
 # 百度统计 
 # 使用博客模板请去掉或者更换 id 
-baidu:
-    id: xxxx
 # Google Analytics
 # 使用博客模板请去掉或者更换 id
-ga:
-    host: auto  
-    id: xxxx
+# ga:
+#     host: auto  
+#     id: xxxx
 
 # 《----------------- 上面的信息修改成你自己的 ---------------------------》
 #

@@ -1,0 +1,20 @@
+I"B<h3 id="if-you-are-bash-user-you-may-know-how-to-add-and-change-system-environment">If you are bash user, you may know how to add and change system environment.</h3>
+
+<p><strong>Modify current terminal system environment(it is contemporary)</strong></p>
+
+<p>Run <code class="highlighter-rouge">$ export PATH="/usr/bin:$PATH"</code> but when you startup a new terminal it is will invalid.</p>
+
+<p><strong>Edit <code class="highlighter-rouge">~/.profile</code> and <code class="highlighter-rouge">~/.bashrc</code> it impacts current user</strong></p>
+
+<p>Add <code class="highlighter-rouge">$ export PATH="/usr/bin:$PATH"</code> into <code class="highlighter-rouge">~/.profile</code> and <code class="highlighter-rouge">~/.bashrc</code> but when other user open a new terminal it is not effected.</p>
+
+<p><strong>Add into <code class="highlighter-rouge">/root/.profile</code> it is effected for all users</strong></p>
+
+<p>Add <code class="highlighter-rouge">$ export PATH="/usr/bin:$PATH"</code> into <code class="highlighter-rouge">/root/.profile</code>.</p>
+
+<h3 id="but-if-you-are-a-fish-shell-user-like-me-something-dislike-above">But if you are a fish shell user like me, something dislike above.</h3>
+
+<p>Add <code class="highlighter-rouge">set --export PATH /usr/bin</code> into <code class="highlighter-rouge">~/.config/fish/config.fish</code>(if you do not have this file <code class="highlighter-rouge">touch</code> it).</p>
+
+<p>Run <code class="highlighter-rouge">$ help set</code> to browse its official documents to get more information about <code class="highlighter-rouge">set</code>.</p>
+:ET

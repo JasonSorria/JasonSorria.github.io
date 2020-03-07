@@ -1,0 +1,267 @@
+I"T<h3 id="introduce">Introduce</h3>
+
+<p>Jekyll is a static site production machine in the form of a simple blog. It has a template directory, which contains documents in original text format.Through markdown (or textile) and liquid, it can be converted into a complete and publishable static website, which can be published on any server you like. Jekyll can also run on GitHub page, that is to say, you can use GitHub’s services to build your project page, blog or website, which is completely free.</p>
+
+<p>Before using Jekyll to build a blog, you need to confirm the native environment, GIT environment (for deployment to the remote end), ruby environment (Jekyll is developed based on Ruby), and package manager rubygems. If you’re a Mac user, you need to install Xcode and command line tools. Download mode: preferences → downloads → components.</p>
+
+<p>Jekyll is a free simple static web page generation tool, which can cooperate with third-party services such as: Disqus (comments), multi say (comments) and sharing and other extension functions. Jekyll can be directly deployed on GitHub (foreign) or coding (domestic), and can bind its own domain name. Jekyll Chinese documents, Jekyll English documents, Jekyll subject list.</p>
+
+<h3 id="jekyll-environment-configuration">Jekyll environment configuration</h3>
+
+<p>Install jekyll</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install jekyll bundler    
+</code></pre></div></div>
+
+<p>If you see that <code class="highlighter-rouge">WARNING:  You don't have $HOME/.gem/ruby/2.6.0/bin in your PATH, gem executables will not run.</code> add this path into your system environment value.(if you do not kown how to add system environment value you can see my <a href="https://jasonsorria.github.io/2019/12/system-environment/">this article</a> or <a href="https://github.com/JasonSorria/linux/blob/master/problem_logs/system-environment.md">my github</a> to get more details).</p>
+
+<p>Create blog</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll new myBlog    
+</code></pre></div></div>
+
+<p>Entrance the directory of blog</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd myBlog  
+</code></pre></div></div>
+
+<p>Startup local service</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll serve
+</code></pre></div></div>
+
+<p>If you encounter the following problems:</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Traceback <span class="p">(</span>most recent <span class="k">call</span> last<span class="p">):</span>
+	<span class="m">15</span><span class="p">:</span> from <span class="sr">/home/</span>sorria<span class="sr">/.gem/</span><span class="k">ruby</span><span class="sr">/2.6.0/</span>bin/jekyll<span class="p">:</span><span class="m">23</span><span class="p">:</span><span class="k">in</span> `<span class="p">&lt;</span>main<span class="p">&gt;</span>'
+	<span class="m">14</span><span class="p">:</span> from <span class="sr">/home/</span>sorria<span class="sr">/.gem/</span><span class="k">ruby</span><span class="sr">/2.6.0/</span>bin/jekyll<span class="p">:</span><span class="m">23</span><span class="p">:</span><span class="k">in</span> `<span class="k">load</span>'
+	<span class="m">13</span><span class="p">:</span> from <span class="sr">/home/</span>sorria<span class="sr">/.gem/</span><span class="k">ruby</span><span class="sr">/2.6.0/</span>gems<span class="sr">/jekyll-4.0.0/</span>exe/jekyll<span class="p">:</span><span class="m">11</span><span class="p">:</span><span class="k">in</span> `<span class="p">&lt;</span><span class="k">top</span> <span class="p">(</span>required<span class="p">)&gt;</span>'
+	<span class="m">12</span><span class="p">:</span> from <span class="sr">/home/</span>sorria<span class="sr">/.gem/</span><span class="k">ruby</span><span class="sr">/2.6.0/</span>gems<span class="sr">/jekyll-4.0.0/</span>lib<span class="sr">/jekyll/</span>plugin_manager<span class="p">.</span>rb<span class="p">:</span><span class="m">52</span><span class="p">:</span><span class="k">in</span> `require_from_bundler'
+	<span class="m">11</span><span class="p">:</span> from <span class="sr">/home/</span>sorria<span class="sr">/.gem/</span><span class="k">ruby</span><span class="sr">/2.6.0/</span>gems<span class="sr">/bundler-2.1.2/</span>lib/bundler<span class="p">.</span>rb<span class="p">:</span><span class="m">149</span><span class="p">:</span><span class="k">in</span> `setup'
+	<span class="m">10</span><span class="p">:</span> from <span class="sr">/home/</span>sorria<span class="sr">/.gem/</span><span class="k">ruby</span><span class="sr">/2.6.0/</span>gems<span class="sr">/bundler-2.1.2/</span>lib<span class="sr">/bundler/</span>runtime<span class="p">.</span>rb<span class="p">:</span><span class="m">20</span><span class="p">:</span><span class="k">in</span> `setup'
+	 <span class="m">9</span><span class="p">:</span> from <span class="sr">/home/</span>sorria<span class="sr">/.gem/</span><span class="k">ruby</span><span class="sr">/2.6.0/</span>gems<span class="sr">/bundler-2.1.2/</span>lib<span class="sr">/bundler/</span>runtime<span class="p">.</span>rb<span class="p">:</span><span class="m">101</span><span class="p">:</span><span class="k">in</span> `block <span class="k">in</span> definition_method'
+	 <span class="m">8</span><span class="p">:</span> from <span class="sr">/home/</span>sorria<span class="sr">/.gem/</span><span class="k">ruby</span><span class="sr">/2.6.0/</span>gems<span class="sr">/bundler-2.1.2/</span>lib<span class="sr">/bundler/</span>definition<span class="p">.</span>rb<span class="p">:</span><span class="m">226</span><span class="p">:</span><span class="k">in</span> `requested_specs'
+	 <span class="m">7</span><span class="p">:</span> from <span class="sr">/home/</span>sorria<span class="sr">/.gem/</span><span class="k">ruby</span><span class="sr">/2.6.0/</span>gems<span class="sr">/bundler-2.1.2/</span>lib<span class="sr">/bundler/</span>definition<span class="p">.</span>rb<span class="p">:</span><span class="m">237</span><span class="p">:</span><span class="k">in</span> `specs_forn
+	 <span class="m">6</span><span class="p">:</span> from <span class="sr">/home/</span>sorria<span class="sr">/.gem/</span><span class="k">ruby</span><span class="sr">/2.6.0/</span>gems<span class="sr">/bundler-2.1.2/</span>lib<span class="sr">/bundler/</span>definition<span class="p">.</span>rb<span class="p">:</span><span class="m">170</span><span class="p">:</span><span class="k">in</span> `specs'
+	 <span class="m">5</span><span class="p">:</span> from <span class="sr">/home/</span>sorria<span class="sr">/.gem/</span><span class="k">ruby</span><span class="sr">/2.6.0/</span>gems<span class="sr">/bundler-2.1.2/</span>lib<span class="sr">/bundler/</span>definition<span class="p">.</span>rb<span class="p">:</span><span class="m">258</span><span class="p">:</span><span class="k">in</span> `resolve'
+	 <span class="m">4</span><span class="p">:</span> from <span class="sr">/home/</span>sorria<span class="sr">/.gem/</span><span class="k">ruby</span><span class="sr">/2.6.0/</span>gems<span class="sr">/bundler-2.1.2/</span>lib<span class="sr">/bundler/</span>resolver<span class="p">.</span>rb<span class="p">:</span><span class="m">22</span><span class="p">:</span><span class="k">in</span> `resolve'
+	 <span class="m">3</span><span class="p">:</span> from <span class="sr">/home/</span>sorria<span class="sr">/.gem/</span><span class="k">ruby</span><span class="sr">/2.6.0/</span>gems<span class="sr">/bundler-2.1.2/</span>lib<span class="sr">/bundler/</span>resolver<span class="p">.</span>rb<span class="p">:</span><span class="m">49</span><span class="p">:</span><span class="k">in</span> `<span class="k">start</span>'
+	 <span class="m">2</span><span class="p">:</span> from <span class="sr">/home/</span>sorria<span class="sr">/.gem/</span><span class="k">ruby</span><span class="sr">/2.6.0/</span>gems<span class="sr">/bundler-2.1.2/</span>lib<span class="sr">/bundler/</span>resolver<span class="p">.</span>rb<span class="p">:</span><span class="m">258</span><span class="p">:</span><span class="k">in</span> `verify_gemfile_dependencies_are_found<span class="p">!</span>'
+	 <span class="m">1</span><span class="p">:</span> from <span class="sr">/home/</span>sorria<span class="sr">/.gem/</span><span class="k">ruby</span><span class="sr">/2.6.0/</span>gems<span class="sr">/bundler-2.1.2/</span>lib<span class="sr">/bundler/</span>resolver<span class="p">.</span>rb<span class="p">:</span><span class="m">258</span><span class="p">:</span><span class="k">in</span> `each'
+<span class="sr">/home/</span>sorria<span class="sr">/.gem/</span><span class="k">ruby</span><span class="sr">/2.6.0/</span>gems<span class="sr">/bundler-2.1.2/</span>lib<span class="sr">/bundler/</span>resolver<span class="p">.</span>rb<span class="p">:</span><span class="m">290</span><span class="p">:</span><span class="k">in</span> `block <span class="k">in</span> verify_gemfile_dependencies_are_found<span class="p">!</span><span class="s1">': Could not find gem '</span>minima <span class="p">(~&gt;</span> <span class="m">2</span><span class="p">.</span><span class="m">5</span><span class="p">)</span>' <span class="k">in</span> any of the gem sources listed <span class="k">in</span> your Gemfile<span class="p">.</span> <span class="p">(</span>Bundler<span class="p">::</span>GemNotFound<span class="p">)</span>
+</code></pre></div></div>
+<p>Only do you do is follow its tips to resolve it. Such as <code class="highlighter-rouge">gem install minima</code>. if it still throws an error, do it again.</p>
+
+<p>Input <a href="http://localhost:4000">http://localhost:4000</a> on browse, you can see this effect.</p>
+
+<p><img src="/images/posts/jekyll/image1.png" alt="" /></p>
+
+<p>So easy !</p>
+
+<h3 id="directory-structure">Directory structure</h3>
+
+<p>The core of Jekyll is actually a text conversion engine. Its concept is actually: you can use your favorite markup language to write articles, which can be markdown, textile, or simple HTML, and then Jekyll will help you put it into a layout or a series of layouts. In the whole process, you can set the URL path, the display style of your text in the layout, and so on. These can be achieved through plain text editing, and the final static page is your finished product.
+　
+The directory structure of a basic Jekyll website is generally like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.
+├── _config.yml
+├── _includes
+|   ├── footer.html
+|   └── header.html
+├── _layouts
+|   ├── default.html
+|   ├── post.html
+|   └── page.html
+├── _posts
+|   └── 2016-10-08-welcome-to-jekyll.markdown
+├── _sass
+|   ├── _base.scss
+|   ├── _layout.scss
+|   └── _syntax-highlighting.scss
+├── about.md
+├── css
+|   └── main.scss
+├── feed.xml
+└── index.html
+
+</code></pre></div></div>
+
+<p>These directory structures and specific functions can be referred to<a href="http://jekyll.com.cn/docs/structure/">Official website documents</a></p>
+
+<p>Enter file _config.yml, modify it to the information you want to see, re Jekyll server, refresh the browser and you can see the information you just modified.</p>
+
+<p>So far, the initial construction of blog is completed.</p>
+
+<h3 id="blog-deployment-to-remote">Blog deployment to remote</h3>
+
+<p>What I’m talking about here is to deploy to GitHub page to create a GitHub account, and then create a warehouse with the same name as your account. For example, my GitHub account is called leopardpan, and my GitHub warehouse is called leopardpan.github.io. After the creation, push the myblog item you just created into the username.github.io warehouse (username refers to your GitHub user Check that your remote warehouse is synchronized with your local myblog, and then you can access your blog by typing username.github.io in your browser.</p>
+
+<h3 id="writing-an-article">Writing an article</h3>
+
+<p>All articles are under the _Posts directory. The article format is mardown. The article file name can be. Mardown or. MD.</p>
+
+<p>It’s easy to write a new article. You can directly copy a copy of 2016-10-16-welcome-to-jekyll from ﹐ posts / directory. Markdown, change the name to 2016-10-16-article1.markdown. Note: the format of the article name must be 2016-10-16-in front of it, and the date can be modified, but it must be in year month day format. The following article1 is the connection URL of the whole article, If the article name is Chinese, then the connection URL of the article will be as follows:
+http://baixin.io/2015/08/%E6%90%AD%E5/, so it is suggested that the article name should be English or Arabic numerals. Double click 2016-10-16-article1.markdown to open.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+title:  "Welcome to Jekyll!"
+date:   2016-10-16 11:29:08 +0800
+categories: jekyll update
+---
+
+Text...
+</code></pre></div></div>
+<p>title: show article name, such as: title: my first article.                 <br />
+date:  show release time, such as: date: 2016-10-16.
+categories: tag label such as: categories: blog</p>
+
+<p>I use Markdown to write article, if you are strange of syntax of Markdown, you can see <a href="https://www.zybuluo.com/">this</a></p>
+
+<h3 id="use-my-blog-template">Use my blog template</h3>
+
+<p>Although the blog deployment is completed, you will find that the blog is too simple for you. If you like my template, you can use my template.</p>
+
+<p>First of all, you need to get my blog, <a href="https://github.com/JasonSorria/JasonSorria.github.io">GitHub project address</a>. You can directly click <a href="https://github.com/JasonSorria/JasonSorria.github.io">download blog</a>, go to JasonSorria.github.io/ directory, and use the command to deploy the local service</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll server   
+</code></pre></div></div>
+
+<h3 id="if-you-have-not-configured-any-jekyll-environment-on-this-machine-you-may-report-an-error">If you have not configured any Jekyll environment on this machine, you may report an error</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/Users/xxxxxxxx/.rvm/rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require': cannot load such file -- bundler (LoadError)
+	from /Users/xxxxxxxx/.rvm/rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/gems/jekyll-3.3.0/lib/jekyll/plugin_manager.rb:34:in `require_from_bundler'
+	from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/gems/jekyll-3.3.0/exe/jekyll:9:in `&lt;top (required)&gt;'
+	from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/bin/jekyll:23:in `load'
+	from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/bin/jekyll:23:in `&lt;main&gt;'
+	from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/bin/ruby_executable_hooks:15:in `eval'
+	from /Users/xxxxxxxx/.rvm/gems/ruby-2.2.2/bin/ruby_executable_hooks:15:in `&lt;main&gt;'
+
+</code></pre></div></div>
+<p>Reason: bundler is not installed, execute the install bundler command.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install bundler
+</code></pre></div></div>
+<p>Tips:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Fetching: bundler-1.13.5.gem (100%)
+Successfully installed bundler-1.13.5
+Parsing documentation for bundler-1.13.5
+Installing ri documentation for bundler-1.13.5
+Done installing documentation for bundler after 5 seconds
+1 gem installed
+</code></pre></div></div>
+
+<p>Execute again <code class="highlighter-rouge">$ jekyll server</code> , and tips:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Could not find proper version of jekyll (3.1.1) in any of the sources
+Run `bundle install` to install missing gems.
+</code></pre></div></div>
+
+<p>Follow the prompts to run the command</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle install
+</code></pre></div></div>
+
+<p>At this time, you may find that the running card of the bundle install does not move.</p>
+
+<p>If there is no prompt for a long time, you can try to modify the source of gem.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem sources --remove https://rubygems.org/
+$ gem sources -a http://ruby.taobao.org/
+$ gem sources -l
+CURRENT SOURCES
+
+http://ruby.taobao.org
+</code></pre></div></div>
+
+<p>Execute the command $bundle install again, and find that there is something moving</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Fetching gem metadata from https://rubygems.org/...........
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Installing jekyll-watch 1.3.1
+Installing jekyll 3.1.1
+Bundle complete! 3 Gemfile dependencies, 17 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+</code></pre></div></div>
+
+<p>After the bundler installation is completed, start the local service again.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll server
+</code></pre></div></div>
+<p>Continue to report errors.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Configuration file: /Users/tendcloud-Caroline/Desktop/leopardpan.github.io/_config.yml
+  Dependency Error: Yikes! It looks like you don't have jekyll-sitemap or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. The full error message from Ruby is: 'cannot load such file -- jekyll-sitemap' If you run into trouble, you can find helpful resources at http://jekyllrb.com/help/! 
+jekyll 3.1.1 | Error:  jekyll-sitemap
+</code></pre></div></div>
+<p>Indicates that the current version of Jekyll is 3.1.1 and cannot use Jekyll Sitemap</p>
+
+<p>There are two solutions</p>
+
+<blockquote>
+  <ol>
+    <li>Open the file _config.yml in the current directory, and change gems: [Jekyll paginate, Jekyll sitemap] to Gems: [Jekyll paginate], that is, remove Jekyll sitemap.</li>
+  </ol>
+</blockquote>
+
+<blockquote>
+  <ol>
+    <li>Upgrade the Jekyll version. My current version is Jekyll 3.1.2.</li>
+  </ol>
+</blockquote>
+
+<p>Save the configuration after modification and execute again</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ jekyll server
+</code></pre></div></div>
+<p>Tips:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Configuration file: /Users/baixinpan/Desktop/OpenSource/Mine/Page-Blog/leopardpan.github.io-github/_config.yml
+            Source: /Users/baixinpan/Desktop/OpenSource/Mine/Page-Blog/leopardpan.github.io-github
+       Destination: /Users/baixinpan/Desktop/OpenSource/Mine/Page-Blog/leopardpan.github.io-github/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.901 seconds.
+ Auto-regeneration: enabled for '/Users/baixinpan/Desktop/OpenSource/Mine/Page-Blog/leopardpan.github.io-github'
+Configuration file: /Users/baixinpan/Desktop/OpenSource/Mine/Page-Blog/leopardpan.github.io-github/_config.yml
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+</code></pre></div></div>
+<p>Indicates the local service deployment is successful.</p>
+
+<p>Enter <a href="127.0.0.1:4000">127.0.0.1:4000</a> in the browser to see the effect of <a href="https://JasonSorria.github.io">JasonSorria.github.io</a>.</p>
+
+<h3 id="change-to-your-own-blog">Change to your own blog</h3>
+
+<blockquote>
+  <ul>
+    <li>If you want to use my template, please remove all the articles in the _post/ directory.</li>
+    <li>Modify the contents of _config.yml file to your own.</li>
+  </ul>
+</blockquote>
+
+<p>Then use git push to go to your own warehouse, check your remote warehouse, enter username.github.io in the browser and you will find that you have a beautiful theme template.</p>
+
+<h4 id="if-you-want-to-change-the-blog-style-but-dont-know-how-to-do-it-you-can-directly-ask-me-in-the-comments-">【if you want to change the blog style but don’t know how to do it, you can directly ask me in the comments 】</h4>
+
+<h3 id="why-jekyll">Why Jekyll</h3>
+
+<p>Using Jekyll, you will find that if you want to use multiple computers to blog, it’s very convenient. Just clone the blog in the remote GitHub warehouse and submit it after writing an article. Because the remote submission is a static web page, hexo can’t directly write markdown’s articles. If you want to see hexo build a blog, you can take a look at my other hexo build a personal blog tutorial.</p>
+
+<p>If you have any problems in building a blog, you can ask me questions in the comments of the original blog.</p>
+
+<p>Later, I will continue to introduce how to modify my blog to your favorite style. Welcome to continue to follow my blog update.</p>
+
+<h3 id="qa">Q&amp;A</h3>
+
+<blockquote>
+  <p>Questions:</p>
+</blockquote>
+
+<blockquote>
+  <p>solution:</p>
+</blockquote>
+
+:ET

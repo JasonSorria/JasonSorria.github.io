@@ -1,0 +1,140 @@
+I"F<h3 id="update-system-source">Update system source</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>pacman-mirrors <span class="nt">-c</span> China
+<span class="nv">$ </span><span class="nb">sudo </span>pacman <span class="nt">-Syyu</span>
+</code></pre></div></div>
+<p><strong>Teamviewer: GUI remote tool</strong></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>pacman <span class="nt">-S</span> teamviewer
+<span class="nv">$ </span><span class="nb">sudo </span>vim /opt/teamviewer/tv_bin/desktop/com.teamviewer.TeamViewer.desktop
+<span class="c"># modify this line: </span>
+<span class="c"># Execute=/bin/sudo /opt/teamviewer/tv_bin/script/teamviewer passwd 123456</span>
+</code></pre></div></div>
+<p><strong>Netease cloud music</strong></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>pacman <span class="nt">-S</span> netease-cloud-music vlc
+<span class="nv">$ </span><span class="nb">sudo </span>vim /usr/share/applications/netease-cloud-music.desktop
+<span class="c"># modify this line:</span>
+<span class="c"># Execute=/opt/netease/netease-cloud-music/netease-cloud-music %U</span>
+</code></pre></div></div>
+
+<p><strong>TIM</strong></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>pacman <span class="nt">-S</span> deepin.com.qq.office
+<span class="c"># add the following lines in your /etc/pacman.conf</span>
+<span class="nv">$ </span>vim /etc/pacman.conf
+
+<span class="o">[</span>archlinuxcn]
+SigLevel <span class="o">=</span> Never
+Server <span class="o">=</span> http://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/<span class="nv">$arch</span>
+
+<span class="nv">$sudo</span> pacman Syu
+<span class="nv">$sudo</span> pacman <span class="nt">-S</span> gnome-settings-daemon
+<span class="c"># excute=/usr/lib/gsd-xsettings //it will became a daemon process hanging out your system</span>
+<span class="c"># open your pamc or other application managements to run tim</span>
+</code></pre></div></div>
+<p><strong>redshift:</strong> a tool for protecting your eyes, but it needs ro extra configuration.</p>
+
+<p><strong>wqy-microhei:</strong> a open source Chinese font for free.</p>
+
+<p><strong>git:</strong> a tool for downloading github code and you need to study its some syntax.</p>
+
+<p><strong>wget:</strong> a download tool for CLI supporting http，ftp.</p>
+
+<p><strong>vim:</strong> a very powerful editor and you can go my <a href="https://github.com/JasonSorria/manjaro_pro">github</a> to see more information about my configuration of vimrc.</p>
+
+<p><strong>zsh:</strong> beautify terminal and you can go <a href="ahmyz.sh">ahmyz.sh</a> to find more theme.(but i recommend you to use fish)</p>
+
+<p><strong>exfat-utils:</strong> a package support exfat.</p>
+
+<p><strong>gvfs-mtp:</strong> it can mount Android phone.</p>
+
+<p><strong>bluez和bluez-utils:</strong> blue tooth model package.</p>
+
+<p><strong>firefox, firefox-i18n-zh-cn:</strong> firefox and its Chinese install package.</p>
+
+<p><strong>google-chrome:</strong> Google browser.</p>
+
+<p><strong>deepin.com.qq.im [deepin-wine]:</strong> it is similar with QQ.</p>
+
+<p><strong>screenfetch:</strong> a funny tool.</p>
+
+<p><strong>neofetch:</strong> a funny tool.</p>
+
+<p><strong>lolcat:</strong> a fucking funny tool and if you use it with screenfetch or neofetch you will get more surprise.</p>
+
+<p><strong>file-roller:</strong> desktop GUI unzip tool.</p>
+
+<p><strong>unarchiver:</strong> use CLI to unzip and support command of unar、lsar</p>
+
+<p><strong>p7zip:</strong> a very popular unzip tool.</p>
+
+<p><strong>kchmviewer:</strong> chm file browser management.</p>
+
+<p><strong>evince:</strong> support PDF, Postscript, djvu, tiff, dvi, XPS, SyncTex support with gedit, comics books (cbr,cbz,cb7 and cbt)</p>
+
+<p><strong>deepin-calculator:</strong> deepin version calculator.</p>
+
+<p><strong>flameshot:</strong> a powerful and easy to use tool for screen shuter.</p>
+
+<p><strong>deepin-screenshot:</strong> deepin screen shuter.</p>
+
+<p><strong>deepin-picker:</strong>a tool for take colors.</p>
+
+<p><strong>deepin-screen-recorder:</strong> deepin record screen tool.</p>
+
+<p><strong>deepin-movie:</strong> deepin video palyer.</p>
+
+<p><strong>vlc:</strong> a powerful open source video palyer for all platform.</p>
+
+<p><strong>xmind-zen:</strong> mind mapping.</p>
+
+<p><strong>wps-office:</strong> Chinese version of office WPS.</p>
+
+<p><strong>ttf-wps-fonts:</strong> Chinese font package of WPS office, which is you must to install if you want to install WPS.</p>
+
+<p><strong>krita:</strong> the alternative of photoshop, Krita is professional painting tool for free and open source.</p>
+
+<p><strong>gimp:</strong>  the alternative of photoshop, GIMP is free, open source and freedom.</p>
+
+<p><strong>baidupcs-go:</strong> CLI version of baidu pan download.</p>
+
+<p><strong>uget:</strong> aria2download tool, need to configure.</p>
+
+<p><strong>baidunetdisk-bin [aur]:</strong> baidu pan disk.</p>
+
+<p><strong>browser360[aur]:</strong> 360browser.</p>
+
+<p><strong>360zip [aur]:</strong> 360zip.</p>
+
+<p><strong>mitalk [aur]:</strong> a powerful chat application on any platform.</p>
+
+<p><strong>jmtpfs [aur]:</strong> mount phone package.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>jmtpfs /path
+<span class="nv">$ </span>fusermount <span class="nt">-u</span> /path
+</code></pre></div></div>
+
+<h1 id="another-applications">Another applications:</h1>
+
+<p><strong>dmidecode:</strong> it can show some information of hardware.</p>
+
+<blockquote>
+  <p>$ sudo dmidecode -t memory // show memory information.</p>
+</blockquote>
+
+<h3 id="development-tools">Development tools:</h3>
+
+<p><strong>postman-bin:</strong> api test tool.</p>
+
+<p><strong>visual-studio-code-bin:</strong> vscode.</p>
+
+<p><strong>android-tools:</strong> android debug tool.</p>
+
+<p><strong>jetbrains-toolbox [aur] :</strong> jetbrains family software management tools.</p>
+
+<p><strong>wechat-devtools [aur]</strong></p>
+
+<p><strong>another-redis-desktop-manager [aur]:</strong> redis management tool.</p>
+
+:ET

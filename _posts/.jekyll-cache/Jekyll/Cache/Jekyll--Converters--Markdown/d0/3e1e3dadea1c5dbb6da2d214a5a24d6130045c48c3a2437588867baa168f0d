@@ -1,0 +1,44 @@
+I"{<h3 id="why-need-to-change-system-font">Why need to change system font</h3>
+
+<p>For me, it not only beautify my system, which make my system seem as a very nice tool, but some font like AwareSome font can support icon font. Maybe many guise do not know what is icon font and how to use it. Icon font is a kind of font which uses the minimum memory size to display a icon like that:</p>
+
+<p><img src="/images/posts/font/show.png" alt="" /></p>
+
+<h3 id="lets-start">Let’s start</h3>
+
+<ul>
+  <li>
+    <p><strong>1 create a fonts directory:</strong></p>
+
+    <p><code class="highlighter-rouge">$ cd /usr/share/fonts &amp;&amp; mkdir new-fonts &amp;&amp; cd new-fonts</code></p>
+  </li>
+  <li>
+    <p><strong>2 download fonts style on baidu or google, i recommend <a href="https://www.nerdfonts.com/">nerd fonts</a>, and unzip it</strong></p>
+  </li>
+  <li>
+    <p><strong>3 add your TTF file into this new-fonts directory</strong></p>
+
+    <p><code class="highlighter-rouge">$ mv xxx*.ttf .</code></p>
+  </li>
+  <li>
+    <p><strong>4 load the fonts:</strong></p>
+
+    <p><code class="highlighter-rouge">$ fc-cache -fv (yum install fontconfig)</code></p>
+  </li>
+  <li>
+    <p><strong>5 list all fonts on linux:</strong></p>
+
+    <p><code class="highlighter-rouge">$ fc-list</code></p>
+  </li>
+</ul>
+
+<h3 id="qa">Q&amp;A</h3>
+
+<blockquote>
+  <p>Q:</p>
+</blockquote>
+
+<blockquote>
+  <p>A:</p>
+</blockquote>
+:ET
